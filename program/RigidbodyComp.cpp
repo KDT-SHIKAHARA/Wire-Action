@@ -15,6 +15,11 @@ void RigidbodyComp::AddForce(const Vector2D<float>& arg_force){
 	totalForce_ += arg_force;
 }
 
+void RigidbodyComp::AddVelocity(const Vector2D<float>& arg_velocity)
+{
+	velocity_ += arg_velocity;
+}
+
 /// <summary>
 /// ˆÚ“®ƒxƒNƒgƒ‹‚Ìİ’è
 /// </summary>

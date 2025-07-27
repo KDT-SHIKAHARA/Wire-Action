@@ -24,6 +24,9 @@ public:
 	//	外力の加算
 	void AddForce(const Vector2D<float>& arg_force);
 
+	//	移動ベクトル追加
+	void AddVelocity(const Vector2D<float>& arg_velocity);
+
 	//	移動ベクトルセット
 	void SetVelocity(const Vector2D<float>&arg_velocity);
 

@@ -1,5 +1,4 @@
 #include "input.h"
-#include"DxLib.h"
 
 //	‰Šú‰»
 InputManager::InputManager(){

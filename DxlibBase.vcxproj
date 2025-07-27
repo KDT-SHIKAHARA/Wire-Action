@@ -158,11 +158,13 @@
     <ClInclude Include="program\GetColor.h" />
     <ClInclude Include="program\hp.h" />
     <ClInclude Include="program\input.h" />
+    <ClInclude Include="program\InputMoveComp.h" />
     <ClInclude Include="program\MapData.h" />
     <ClInclude Include="program\MapLoader.h" />
     <ClInclude Include="program\MapManager.h" />
     <ClInclude Include="program\MapRender.h" />
     <ClInclude Include="program\MapResHandle.h" />
+    <ClInclude Include="program\Player.h" />
     <ClInclude Include="program\Rect.h" />
     <ClInclude Include="program\RigidbodyComp.h" />
     <ClInclude Include="program\power.h" />
@@ -194,6 +196,7 @@
     <ClCompile Include="program\GameManager.cpp" />
     <ClCompile Include="program\GameObject.cpp" />
     <ClCompile Include="program\input.cpp" />
+    <ClCompile Include="program\InputMoveComp.cpp" />
     <ClCompile Include="program\MapData.cpp" />
     <ClCompile Include="program\MapLoader.cpp" />
     <ClCompile Include="program\MapManager.cpp" />

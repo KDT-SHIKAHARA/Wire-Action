@@ -128,6 +128,15 @@
     <Filter Include="system\ECS\Component\collider">
       <UniqueIdentifier>{5c45a9d2-0353-4bf0-9663-51191b841eea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects">
+      <UniqueIdentifier>{5b1892c1-f0b0-4ef5-a396-a20388024845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Player">
+      <UniqueIdentifier>{629073a8-6b52-4674-ba16-e51643251e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy">
+      <UniqueIdentifier>{d7d26a8c-dfca-4fb9-8a15-d3cf7bad9329}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -256,6 +265,12 @@
     <ClInclude Include="program\ColliderComp.h">
       <Filter>system\ECS\Component\collider</Filter>
     </ClInclude>
+    <ClInclude Include="program\Player.h">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="program\InputMoveComp.h">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -309,5 +324,6 @@
     <ClCompile Include="program\MapManager.cpp">
       <Filter>system\map\Manager</Filter>
     </ClCompile>
+    <ClCompile Include="program\InputMoveComp.cpp" />
   </ItemGroup>
 </Project>
