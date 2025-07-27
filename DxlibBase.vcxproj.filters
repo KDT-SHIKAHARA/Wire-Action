@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{c1437efe-b21e-447a-be33-f37d96748c37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{1fcc3357-919a-4119-a874-dfb696835c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\GameLoop">
+      <UniqueIdentifier>{ec0b0bc3-8bd9-4c99-8b0b-2ea3b95f5785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\Debug">
+      <UniqueIdentifier>{f45ae2c6-7a29-454b-9416-4478c960ed1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\Debug\Log">
+      <UniqueIdentifier>{b7a98f04-56c9-4865-b976-9e31c9825aa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\define">
+      <UniqueIdentifier>{10c7e383-74ea-4652-aefb-073c91227679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\define\debug">
+      <UniqueIdentifier>{01981671-1510-4273-879b-fdd85b92716d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene">
+      <UniqueIdentifier>{71b18d8d-5876-4a4f-8628-8e5f9ef9fc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene\debug">
+      <UniqueIdentifier>{557267a4-d208-4063-89ca-588c56cd3a96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene\base">
+      <UniqueIdentifier>{3910d1d1-db6c-4648-86ba-4da59c2cfcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\input">
+      <UniqueIdentifier>{e969f416-16f5-4344-9b31-14764a249ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\fps,time">
+      <UniqueIdentifier>{74e78201-4d0d-4d08-aaad-1cb8e693f8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\config">
+      <UniqueIdentifier>{362b8653-2d22-49ae-a583-eb3496bfc27f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\random">
+      <UniqueIdentifier>{c751136f-ef6d-4ef2-b223-ad5f44b86066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\resource">
+      <UniqueIdentifier>{81120f50-20f8-499f-9b48-65e8cdcd2855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\resource\texture">
+      <UniqueIdentifier>{7cc2ec91-7b02-41b8-a059-8e1af981b272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\resource\sound">
+      <UniqueIdentifier>{e7416030-56d4-49eb-9b57-42a8c79ca283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\valueTypes">
+      <UniqueIdentifier>{261be889-0db3-4fad-9e83-b7c00c99d672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\status">
+      <UniqueIdentifier>{daa7ed46-412f-4ecc-a2d0-8b60605b7d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\define\color">
+      <UniqueIdentifier>{83f554b4-cf83-45cf-b8c4-43f5ceaf587a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\sound">
+      <UniqueIdentifier>{fb603782-ec53-4a81-94dc-0a601bd51dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\Save">
+      <UniqueIdentifier>{bbf8fa8f-c058-494f-b32b-7c488bd03646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\transform">
+      <UniqueIdentifier>{e4a24005-8a9b-4bee-8d3b-1059bcef736f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS">
+      <UniqueIdentifier>{627e95ae-b0cf-406c-a003-215d7e0f3528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\GameObject">
+      <UniqueIdentifier>{a029b837-2f1b-4180-9617-7c5897ee24a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\Component">
+      <UniqueIdentifier>{76647581-5af1-45bc-97fe-dac37ab80956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\Component\Base">
+      <UniqueIdentifier>{ebee0720-ef23-43d0-8d11-27d18266acaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\Component\Rigid">
+      <UniqueIdentifier>{9da7a768-a083-4f9e-9b74-0cdaeef381a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map">
+      <UniqueIdentifier>{0b4df74f-4733-47e2-84a2-94c2e06816c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\!Test">
+      <UniqueIdentifier>{32407241-c037-4438-af2a-cfcfc0b4487a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\!Test\!Player">
+      <UniqueIdentifier>{82f0af35-1edb-4ae0-9ec5-3e2de46f1506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\Tile">
+      <UniqueIdentifier>{6f99953e-75fe-4819-b485-da437a26caf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\MapData">
+      <UniqueIdentifier>{a320815d-cc7a-4d61-9a06-f8ff8731e92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\MapLoader">
+      <UniqueIdentifier>{71486d12-c1c4-4ee7-a9ac-5cdd2b159544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\MapRender">
+      <UniqueIdentifier>{bc655f90-6eee-4145-a1df-13979c2da810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\Camera">
+      <UniqueIdentifier>{1d5958fe-b59a-4599-a4a3-a91c456765ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\ResourceHandle">
+      <UniqueIdentifier>{a14ba241-551c-4d7d-addf-69f0494715a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\tinyxml12">
+      <UniqueIdentifier>{949e1ade-b2ae-4512-aa15-99671c68d75a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\map\Manager">
+      <UniqueIdentifier>{7f02a4eb-1bae-4e67-a17c-e38039701088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\Math2D">
+      <UniqueIdentifier>{78dce810-2d72-4a0b-9a06-342db5e60288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\Component\collider">
+      <UniqueIdentifier>{5c45a9d2-0353-4bf0-9663-51191b841eea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="program\GameManager.h">
+      <Filter>system\GameLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="program\DebugLog.h">
+      <Filter>system\Debug\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="program\debugDef.h">
+      <Filter>system\define\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="program\DebugSceneNum.h">
+      <Filter>system\define\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="program\DebugScene.h">
+      <Filter>system\scene\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="program\sceneBase.h">
+      <Filter>system\scene\base</Filter>
+    </ClInclude>
+    <ClInclude Include="program\input.h">
+      <Filter>system\input</Filter>
+    </ClInclude>
+    <ClInclude Include="program\RemFPS.h">
+      <Filter>system\fps,time</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Time.h">
+      <Filter>system\fps,time</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Random.h">
+      <Filter>system\random</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SoundResource.h">
+      <Filter>system\resource\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SoundResourceMng.h">
+      <Filter>system\resource\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\TextureResource.h">
+      <Filter>system\resource\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="program\TextureResourceMng.h">
+      <Filter>system\resource\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="program\vector2d.h">
+      <Filter>system\valueTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="program\flag.h">
+      <Filter>system\valueTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Color.h">
+      <Filter>system\valueTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="program\hp.h">
+      <Filter>system\status</Filter>
+    </ClInclude>
+    <ClInclude Include="program\StatusAlias.h">
+      <Filter>system\status</Filter>
+    </ClInclude>
+    <ClInclude Include="program\power.h">
+      <Filter>system\status</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SystemConfig.h">
+      <Filter>system\config</Filter>
+    </ClInclude>
+    <ClInclude Include="program\GetColor.h">
+      <Filter>system\define\color</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SoundManager.h">
+      <Filter>system\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Sound.h">
+      <Filter>system\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SoundType.h">
+      <Filter>system\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SoundPathTable .h">
+      <Filter>system\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SaveData.h">
+      <Filter>system\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="program\transform.h">
+      <Filter>system\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="program\GameObject.h">
+      <Filter>system\ECS\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Component.h">
+      <Filter>system\ECS\Component\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="program\DrawableComp.h">
+      <Filter>system\ECS\Component\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="program\RigidbodyComp.h">
+      <Filter>system\ECS\Component\Rigid</Filter>
+    </ClInclude>
+    <ClInclude Include="program\TestPlayer.h">
+      <Filter>system\!Test\!Player</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Tile.h">
+      <Filter>system\map\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MapData.h">
+      <Filter>system\map\MapData</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MapLoader.h">
+      <Filter>system\map\MapLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MapRender.h">
+      <Filter>system\map\MapRender</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Camera.h">
+      <Filter>system\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MapResHandle.h">
+      <Filter>system\map\ResourceHandle</Filter>
+    </ClInclude>
+    <ClInclude Include="program\MapManager.h">
+      <Filter>system\map\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Rect.h">
+      <Filter>system\Math2D</Filter>
+    </ClInclude>
+    <ClInclude Include="program\ColliderComp.h">
+      <Filter>system\ECS\Component\collider</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="program\GameManager.cpp">
+      <Filter>system\GameLoop</Filter>
+    </ClCompile>
+    <ClCompile Include="program\DebugScene.cpp">
+      <Filter>system\scene\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="program\input.cpp">
+      <Filter>system\input</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Color.cpp">
+      <Filter>system\valueTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Sound.cpp">
+      <Filter>system\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="program\SoundManager.cpp">
+      <Filter>system\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="program\transform.cpp">
+      <Filter>system\transform</Filter>
+    </ClCompile>
+    <ClCompile Include="program\GameObject.cpp">
+      <Filter>system\ECS\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="program\RigidbodyComp.cpp">
+      <Filter>system\ECS\Component\Rigid</Filter>
+    </ClCompile>
+    <ClCompile Include="program\TestPlayer.cpp">
+      <Filter>system\!Test\!Player</Filter>
+    </ClCompile>
+    <ClCompile Include="program\MapData.cpp">
+      <Filter>system\map\MapData</Filter>
+    </ClCompile>
+    <ClCompile Include="program\MapLoader.cpp">
+      <Filter>system\map\MapLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="program\MapRender.cpp">
+      <Filter>system\map\MapRender</Filter>
+    </ClCompile>
+    <ClCompile Include="program\MapResHandle.cpp">
+      <Filter>system\map\ResourceHandle</Filter>
+    </ClCompile>
+    <ClCompile Include="library\tinyxml12\tinyxml2.cpp">
+      <Filter>system\tinyxml12</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Camera.cpp">
+      <Filter>system\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="program\MapManager.cpp">
+      <Filter>system\map\Manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
