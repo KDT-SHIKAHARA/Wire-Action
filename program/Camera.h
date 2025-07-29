@@ -1,6 +1,7 @@
 #pragma once
 #include"vector2d.h"
 
+
 class Camera {
 	Vector2D<float> position_;
 	Vector2D<float> area_size_;

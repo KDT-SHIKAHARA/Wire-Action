@@ -6,12 +6,13 @@
 
 
 class MoveSystem final : public Singleton<MoveSystem>{
+	friend class Singleton<MoveSystem>;
+
 	MoveSystem() = default;
 	virtual ~MoveSystem() = default;
 public:
 	void Update(const std::vector<std::shared_ptr<GameObject>>& gameObjList);
 
-private:
 
 };
 

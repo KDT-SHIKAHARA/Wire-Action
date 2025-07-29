@@ -2,6 +2,7 @@
 #include"Component.h"
 #include"vector2d.h"
 #include"flag.h"
+#include"Time.h"
 
 
 class RigidbodyComp :public Component {
@@ -31,7 +32,7 @@ public:
 	void SetVelocity(const Vector2D<float>&arg_velocity);
 
 	//	移動ベクトルの取得
-	Vector2D<float> velocity()const { return velocity_; }
+	Vector2D<float> velocity()const { return velocity_ * Time::deltaTime(); }
 
 	//	更新
 	void Update()override;

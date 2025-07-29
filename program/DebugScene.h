@@ -9,8 +9,7 @@
 /// </summary>
 class SceneDebug :public Scene{
 	std::shared_ptr<GameObject> player_;
-	MapManager map;
-	Camera camera;
+
 
 public:
 	SceneDebug();

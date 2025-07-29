@@ -1,2 +1,62 @@
-﻿  moveSystem.cpp
+﻿  MapManager.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.h(35,53):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator *<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
+          with
+          [
+              N=double
+          ]
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(166,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(205,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\MapManager.cpp(146,39):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator /<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
+          with
+          [
+              N=double
+          ]
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(206,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+  
   DxlibBase.vcxproj -> C:\Users\kirit\Source\Repos\Wire-Action\x64\Debug\DxlibBase.exe

@@ -35,7 +35,7 @@ void RigidbodyComp::SetVelocity(const Vector2D<float>& arg_velocity){
 /// </summary>
 void RigidbodyComp::Update(){
 
-	//	Œ¸Š—Ê‚Ì”ÍˆÍ§ŒÀ
+	////	Œ¸Š—Ê‚Ì”ÍˆÍ§ŒÀ
 	damping_ = std::clamp(damping_, 0.0f, 1.0f);
 
 	//	e‚Ìweak_ptr‚ğlock‚µ‚Äæ“¾
@@ -57,7 +57,7 @@ void RigidbodyComp::Update(){
 
 		//	‰Á‘¬“x = ŠO—Í / ¿—Ê
 		acceleration_ = totalForce_ / mass_;
-		velocity_ += acceleration_;
+		velocity_ += acceleration_ ;
 
 
 

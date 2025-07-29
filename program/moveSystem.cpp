@@ -1,5 +1,7 @@
 #include"moveSystem.h"
 #include"RigidbodyComp.h"
+#include"Time.h"
+
 
 /// <summary>
 /// ゲームオブジェクトのコンポーネントにRigidBodyがついていたら移動処理をする。
@@ -11,5 +13,6 @@ void MoveSystem::Update(const std::vector<std::shared_ptr<GameObject>>& gameObjL
 		auto rigid = gameObj->GetComponent<RigidbodyComp>();
 		if (!rigid) continue;
 		gameObj->transform.AddPosition(rigid->velocity());
+
 	}
 }

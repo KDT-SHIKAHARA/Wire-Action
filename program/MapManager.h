@@ -1,10 +1,19 @@
 #pragma once
+#include<vector>
+#include<memory>
 #include"MapRender.h"
 #include"MapData.h"
 #include"MapResHandle.h"
+#include"singleton.h"
 
 class GameObject;
-class MapManager {
+class MapManager:public Singleton<MapManager>{
+	friend class Singleton<MapManager>;
+
+	MapManager() = default;
+	virtual ~MapManager() = default;
+
+
 	//	描画
 	MapRender render_;
 
@@ -19,7 +28,8 @@ class MapManager {
 	std::string map_data_path_ = "res/map/data/map_data.txt";
 
 public:
-	void CheckCollision( GameObject& gameObj);
+	//	当たり判定
+	void CheckCollision(const std::vector<std::shared_ptr<GameObject>>& gameObjs);
 
 	//	マップデータの読込
 	void Load();
