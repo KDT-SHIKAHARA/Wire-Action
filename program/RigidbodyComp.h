@@ -16,9 +16,9 @@ class RigidbodyComp :public Component {
 public:
 	Flag isGravity_;				//	重力フラグ true: 重力加算 false: 無重力
 	Flag isGrounded_;				//	地面に設置判定　true: 設置している	false:設置してない
-	Flag isStatic_;					//	物理挙動を行うかどうか true: 行う false: 行わない
+	Flag isStatic_;					//	物理挙動を行うかどうか true: 行わない false: 行う
 
-	RigidbodyComp(float arg_mass = 1.0f, Flag arg_isGravity = true, Flag arg_isStatic = true);
+	RigidbodyComp(float arg_mass = 1.0f, Flag arg_isGravity = true, Flag arg_isStatic = false);
 	virtual ~RigidbodyComp() = default;
 
 	//	外力の加算

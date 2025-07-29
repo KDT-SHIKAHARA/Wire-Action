@@ -137,6 +137,15 @@
     <Filter Include="Game\GameObjects\Enemy">
       <UniqueIdentifier>{d7d26a8c-dfca-4fb9-8a15-d3cf7bad9329}</UniqueIdentifier>
     </Filter>
+    <Filter Include="system\ECS\Component\system">
+      <UniqueIdentifier>{267a26a2-1ee5-493b-b5d2-76dd9afb50e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\singleton">
+      <UniqueIdentifier>{055c5db6-a384-4cb8-8028-185c6af60942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\manager">
+      <UniqueIdentifier>{92f9dcc0-ded6-4642-96c2-1c434c7b5855}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -271,6 +280,15 @@
     <ClInclude Include="program\InputMoveComp.h">
       <Filter>Game\GameObjects\Player</Filter>
     </ClInclude>
+    <ClInclude Include="program\moveSystem.h">
+      <Filter>system\ECS\Component\system</Filter>
+    </ClInclude>
+    <ClInclude Include="program\singleton.h">
+      <Filter>system\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="program\GameObjectMgr.h">
+      <Filter>Game\GameObjects\manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -324,6 +342,14 @@
     <ClCompile Include="program\MapManager.cpp">
       <Filter>system\map\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="program\InputMoveComp.cpp" />
+    <ClCompile Include="program\Player.cpp">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="program\InputMoveComp.cpp">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="program\moveSystem.cpp">
+      <Filter>system\ECS\Component\system</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

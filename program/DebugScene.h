@@ -8,7 +8,7 @@
 /// デバック用スクリーン
 /// </summary>
 class SceneDebug :public Scene{
-	std::shared_ptr<GameObject> testPlayer;
+	std::shared_ptr<GameObject> player_;
 	MapManager map;
 	Camera camera;
 

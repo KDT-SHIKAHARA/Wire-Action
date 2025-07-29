@@ -79,6 +79,7 @@
       <AdditionalIncludeDirectories>library\dxlib;library\cereal;library\tinyxml12</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -97,6 +98,7 @@
       <AdditionalIncludeDirectories>library\dxlib;library\cereal;library\tinyxml12</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -115,6 +117,7 @@
       <AdditionalIncludeDirectories>library\dxlib;library\cereal;library\tinyxml12</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -133,6 +136,7 @@
       <AdditionalIncludeDirectories>library\dxlib;library\cereal;library\tinyxml12</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,6 +159,7 @@
     <ClInclude Include="program\flag.h" />
     <ClInclude Include="program\GameManager.h" />
     <ClInclude Include="program\GameObject.h" />
+    <ClInclude Include="program\GameObjectMgr.h" />
     <ClInclude Include="program\GetColor.h" />
     <ClInclude Include="program\hp.h" />
     <ClInclude Include="program\input.h" />
@@ -164,6 +169,7 @@
     <ClInclude Include="program\MapManager.h" />
     <ClInclude Include="program\MapRender.h" />
     <ClInclude Include="program\MapResHandle.h" />
+    <ClInclude Include="program\moveSystem.h" />
     <ClInclude Include="program\Player.h" />
     <ClInclude Include="program\Rect.h" />
     <ClInclude Include="program\RigidbodyComp.h" />
@@ -172,6 +178,7 @@
     <ClInclude Include="program\RemFPS.h" />
     <ClInclude Include="program\SaveData.h" />
     <ClInclude Include="program\sceneBase.h" />
+    <ClInclude Include="program\singleton.h" />
     <ClInclude Include="program\Sound.h" />
     <ClInclude Include="program\SoundPathTable .h" />
     <ClInclude Include="program\SoundResource.h" />
@@ -202,6 +209,8 @@
     <ClCompile Include="program\MapManager.cpp" />
     <ClCompile Include="program\MapRender.cpp" />
     <ClCompile Include="program\MapResHandle.cpp" />
+    <ClCompile Include="program\moveSystem.cpp" />
+    <ClCompile Include="program\Player.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />

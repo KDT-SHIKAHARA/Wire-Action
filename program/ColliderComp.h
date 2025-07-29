@@ -2,7 +2,6 @@
 #include"Component.h"
 #include"vector2d.h"
 
-
 /// <summary>
 /// “–‚½‚è”»’è‚É•K—v‚Èî•ñ‚ğæ“¾‚·‚é
 /// </summary>

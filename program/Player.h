@@ -17,6 +17,10 @@ public:
 	Player();
 	virtual ~Player() = default;
 
+	//	コンポーネント追加
+	void SetComponent();
+
+	//	更新、描画
 	void Update()override;
 	void Render()override;
 

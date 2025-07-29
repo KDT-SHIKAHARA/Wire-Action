@@ -3,7 +3,8 @@
 #include"GameObject.h"
 #include"ColliderComp.h"
 #include"RigidbodyComp.h"
-#include<cmath>
+#include <cmath>
+
 /// <summary>
 /// マップとの当たり判定を行う。
 /// メソッドの呼び出し前に当たり判定を行えるオブジェクト化判定してから呼び出す
@@ -11,100 +12,135 @@
 /// <param name="gameObj"></param>
 void MapManager::CheckCollision( GameObject& gameObj){
 
-	//	ゲームオブジェクトの座標
-	const auto& obj_position = gameObj.transform.WorldPosition();
+	//	rigidbody、colliderのポインタ取得
+	auto rigid_ptr = gameObj.GetComponent<RigidbodyComp>();
+	auto collider_ptr = gameObj.GetComponent<ColliderComp>();
 
-	//	ゲームオブジェクトのサイズ
-	const auto& gameobj_size = gameObj.GetComponent<ColliderComp>()->size();
+	//	取得できなければ終了
+	if (!rigid_ptr || !collider_ptr)return;
 
-	//	そのゲームオブジェクトの直前の移動ベクトル
-	const auto& gameobj_velo = gameObj.GetComponent<RigidbodyComp>()->velocity();
+	//	座標取得
+	const auto& pos = gameObj.transform.WorldPosition();
+	//	サイズ取得
+	const auto& size = collider_ptr->size();
+	//	移動量取得
+	const auto& velocity = rigid_ptr->velocity();
+
 
 	//	マップタイルのサイズ
 	const auto& tile_size = mapData_.GetTileSize();
 
-	//	プレイヤーと当たっているマップの範囲
-
-	//	当たり判定に必要な情報
-	Rect objRect{
-		obj_position.x,
-		obj_position.y,
-		gameobj_size.x,
-		gameobj_size.y,
-	};
-
-	//	マップ外ならマップの数字にする。
-	const int left = objRect.x / tile_size;
-	const int right = (objRect.x + objRect.w) / tile_size;
-	const int top = objRect.y / tile_size;
-	const int bottom = (objRect.y + objRect.h) / tile_size;
-
-	//	マップ外に出たら当たり判定を終了する
-	auto rigit_ptr = gameObj.GetComponent<RigidbodyComp>();
 
 
+	//	プレイヤーの当たり判定用Rect作成
+	Rect current_GameObj{ pos.x,pos.y,size.x,size.y };
 
-	//	マップ内の数字で当たり判定
+	//	移動するはずの座標
+	Rect next_GameObj = current_GameObj;
+	next_GameObj.x += velocity.x;
+	next_GameObj.y += velocity.y;
+	
+
+	//	衝突チャックをする範囲
+	int left = std::floor(next_GameObj.x / tile_size);
+	int right = std::floor((next_GameObj.x + next_GameObj.w) / tile_size);
+	int top = std::floor(next_GameObj.y / tile_size);
+	int bottom = std::floor((next_GameObj.y + next_GameObj.h) / tile_size);
+
+	//	補正する現在の移動ベクトル
+	Vector2D<float> new_velocity = velocity;
+	
+	//	横方向
+	next_GameObj = current_GameObj;
+	next_GameObj.x += velocity.x;
+
 	for (int y = top; y <= bottom; y++) {
 		for (int x = left; x <= right; x++) {
-			if (!mapData_.IsInMap(x, y))continue;
+			if (!mapData_.IsInMap(x, y)) continue;
+			if (!mapData_.GetTile(x, y).isCollision) continue;
 
-			const auto& tile = mapData_.GetTile(x, y);
-			if (!tile.isCollision) continue;
-
-			//	マップタイルの矩形
-			Rect tileRect{
-				(float)x * tile_size,
-				(float)y * tile_size,
-				(float)tile_size,
-				(float)tile_size,
+			//	当たり判定をするタイルの矩形
+			Rect tile{
+				(float)(x * tile_size),
+				(float)(y * tile_size),
+				(float)(tile_size),
+				(float)(tile_size),
 			};
 
-			//	めり込んでいるか判定
-			if (objRect.IsCollision(tileRect)) {
-				//	false: 左に進んでいる true: 右に進んでいる
-				float overlap_x = (gameobj_velo.x > 0) ?
-					(objRect.x + objRect.w) - tileRect.x
-					: (tileRect.x + tileRect.w) - tileRect.x;
-
-				//	false: 上に進んでいる true: 下に進んでいる
-				float overlap_y = (gameobj_velo.y > 0) ?
-					(objRect.y + objRect.h) - tileRect.y
-					: (tileRect.y + tileRect.h) - tileRect.y;
-
-
-				//	小さいほうに押し戻す
-				if (std::abs(overlap_x) < std::abs(overlap_y)) {
-					auto tmp_vec = (gameobj_velo.x > 0) ? -overlap_x : overlap_x;
-
-					gameObj.transform.Translate(Vector2D<float>{tmp_vec, 0});
+			//	当たり判定
+			if (next_GameObj.IsCollision(tile)) {
+				//	押し戻す量の計算
+				if (velocity.x > 0) {	//	右方向
+					new_velocity.x = tile.x - (current_GameObj.x + current_GameObj.w);
 				}
-
-				else {
-					auto tmp_vec = (gameobj_velo.y > 0) ? -overlap_y : overlap_y;
-					gameObj.transform.Translate(Vector2D<float>{0, tmp_vec});
-
-					//	下方向なら
-					//  接地フラグを立てる。
-					//	重力フラグを折る
-					if (gameobj_velo.y > 0)
-					{
-						rigit_ptr->SetVelocity({ rigit_ptr->velocity().x,0 });
-						rigit_ptr->isGravity_.Set(false);
-						rigit_ptr->isGrounded_.Set(true);
-					}
-
-				
-					//	移動量をなくす
-					
-
+				else if (velocity.x < 0) { //	左方向
+					new_velocity.x = (tile.x +  tile.w) - current_GameObj.x;
 				}
-
-				objRect.x = obj_position.x;
-				objRect.y = obj_position.y;
-
+				else {	//	何もないなら
+					new_velocity.x = 0;
+				}
 			}
 		}
+	}
+
+
+	//	横の補正後の座標で縦方向の計算
+	current_GameObj.x += new_velocity.x;
+
+	//	最後に接地判定を変えるためのbool
+	Flag isGround = false;
+
+
+	//	縦移動
+	next_GameObj = current_GameObj;
+	next_GameObj.y += velocity.y;
+
+	//	横の補正後のマップ番号
+	left = std::floor(next_GameObj.x / tile_size);
+	right = std::floor((next_GameObj.x + next_GameObj.w) / tile_size);
+
+
+	for (int y = top; y <= bottom; y++) {
+		for (int x = left; x <= right; x++) {
+			if (!mapData_.IsInMap(x, y)) continue;
+			if (!mapData_.GetTile(x, y).isCollision) continue;
+
+			//	当たり判定をするタイルの矩形
+			Rect tile{
+				(float)(x * tile_size),
+				(float)(y * tile_size),
+				(float)(tile_size),
+				(float)(tile_size),
+			};
+
+			//	当たり判定
+			if (next_GameObj.IsCollision(tile)) {
+				if (velocity.y > 0) {	//	下方向
+					new_velocity.y = tile.y - (current_GameObj.y + current_GameObj.h);
+					isGround = true;
+				}
+				else if (velocity.y < 0) {	//	上方向
+					new_velocity.y = (tile.y + tile.h) - current_GameObj.y;
+				}
+				else {	//	何もなければ
+					new_velocity.y = 0;
+				}
+			}
+
+		}
+	}
+
+	//	補正した速度をセット
+	rigid_ptr->SetVelocity(new_velocity);
+
+	//	設置判定を反映
+	if (isGround) {
+		rigid_ptr->isGravity_.Set(false);
+		rigid_ptr->isGrounded_.Set(true);
+	}
+	else {
+		rigid_ptr->isGravity_.Set(true);
+		rigid_ptr->isGrounded_.Set(false);
 	}
 
 }
