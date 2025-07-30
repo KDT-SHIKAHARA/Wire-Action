@@ -164,6 +164,7 @@
     <ClInclude Include="program\hp.h" />
     <ClInclude Include="program\input.h" />
     <ClInclude Include="program\InputMoveComp.h" />
+    <ClInclude Include="program\JumpComp.h" />
     <ClInclude Include="program\MapData.h" />
     <ClInclude Include="program\MapLoader.h" />
     <ClInclude Include="program\MapManager.h" />
@@ -171,6 +172,8 @@
     <ClInclude Include="program\MapResHandle.h" />
     <ClInclude Include="program\moveSystem.h" />
     <ClInclude Include="program\Player.h" />
+    <ClInclude Include="program\PlayerState.h" />
+    <ClInclude Include="program\PlayerStateController.h" />
     <ClInclude Include="program\Rect.h" />
     <ClInclude Include="program\RigidbodyComp.h" />
     <ClInclude Include="program\power.h" />
@@ -211,6 +214,7 @@
     <ClCompile Include="program\MapResHandle.cpp" />
     <ClCompile Include="program\moveSystem.cpp" />
     <ClCompile Include="program\Player.cpp" />
+    <ClCompile Include="program\PlayerStateController.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />

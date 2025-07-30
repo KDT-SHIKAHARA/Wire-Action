@@ -13,6 +13,7 @@ C:\Users\kirit\source\repos\Wire-Action\program\MapRender.cpp;C:\Users\kirit\sou
 C:\Users\kirit\source\repos\Wire-Action\program\MapResHandle.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\MapResHandle.obj
 C:\Users\kirit\source\repos\Wire-Action\program\moveSystem.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\moveSystem.obj
 C:\Users\kirit\source\repos\Wire-Action\program\Player.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\Player.obj
+C:\Users\kirit\source\repos\Wire-Action\program\PlayerStateController.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\PlayerStateController.obj
 C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\RigidbodyComp.obj
 C:\Users\kirit\source\repos\Wire-Action\program\Sound.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\Sound.obj
 C:\Users\kirit\source\repos\Wire-Action\program\SoundManager.cpp;C:\Users\kirit\source\repos\Wire-Action\DxlibBase\x64\Debug\SoundManager.obj

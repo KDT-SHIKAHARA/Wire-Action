@@ -146,6 +146,15 @@
     <Filter Include="Game\GameObjects\manager">
       <UniqueIdentifier>{92f9dcc0-ded6-4642-96c2-1c434c7b5855}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Player\move">
+      <UniqueIdentifier>{10c8aca5-f15b-40ab-a4ff-406c7e10879d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Player\jump">
+      <UniqueIdentifier>{8ecdbcca-eedc-4ba1-98e9-e141c9bc64eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Player\state">
+      <UniqueIdentifier>{33aa5d6f-5f13-48a3-b346-836b391a6f7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -277,9 +286,6 @@
     <ClInclude Include="program\Player.h">
       <Filter>Game\GameObjects\Player</Filter>
     </ClInclude>
-    <ClInclude Include="program\InputMoveComp.h">
-      <Filter>Game\GameObjects\Player</Filter>
-    </ClInclude>
     <ClInclude Include="program\moveSystem.h">
       <Filter>system\ECS\Component\system</Filter>
     </ClInclude>
@@ -288,6 +294,18 @@
     </ClInclude>
     <ClInclude Include="program\GameObjectMgr.h">
       <Filter>Game\GameObjects\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="program\InputMoveComp.h">
+      <Filter>Game\GameObjects\Player\move</Filter>
+    </ClInclude>
+    <ClInclude Include="program\JumpComp.h">
+      <Filter>Game\GameObjects\Player\jump</Filter>
+    </ClInclude>
+    <ClInclude Include="program\PlayerState.h">
+      <Filter>Game\GameObjects\Player\state</Filter>
+    </ClInclude>
+    <ClInclude Include="program\PlayerStateController.h">
+      <Filter>Game\GameObjects\Player\state</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -345,11 +363,14 @@
     <ClCompile Include="program\Player.cpp">
       <Filter>Game\GameObjects\Player</Filter>
     </ClCompile>
-    <ClCompile Include="program\InputMoveComp.cpp">
-      <Filter>Game\GameObjects\Player</Filter>
-    </ClCompile>
     <ClCompile Include="program\moveSystem.cpp">
       <Filter>system\ECS\Component\system</Filter>
+    </ClCompile>
+    <ClCompile Include="program\InputMoveComp.cpp">
+      <Filter>Game\GameObjects\Player\move</Filter>
+    </ClCompile>
+    <ClCompile Include="program\PlayerStateController.cpp">
+      <Filter>Game\GameObjects\Player\state</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,6 +3,9 @@
 #include "ColliderComp.h"
 #include "InputMoveComp.h"
 #include "GetColor.h"
+#include "PlayerState.h"
+#include "PlayerStateController.h"
+
 
 /// <summary>
 /// ‰Šú‰»
@@ -18,9 +21,13 @@ Player::Player():state(PlayerState::idle)
 void Player::SetComponent()
 {
 	transform.SetPosition(Vector2D<float>(500, 100));
-	AddComponent<RigidbodyComp>();	//	•¨—
+	auto rigid = AddComponent<RigidbodyComp>();	//	•¨—
 	AddComponent<ColliderComp>(Vector2D<float>{ 50, 70 });
 	AddComponent<InputMove>();		//	“ü—ÍˆÚ“®
+	AddComponent<PlayerStateComp>(5);
+	auto stateCo = AddComponent<StateController>();
+	stateCo->Start();
+
 }
 
 /// <summary>
@@ -28,24 +35,7 @@ void Player::SetComponent()
 /// </summary>
 void Player::Update()
 {
-	auto rigid = GetComponent<RigidbodyComp>();	//	•¨—
-	switch (state) {
-	case PlayerState::idle:
-		//	‘Ò‹@ó‘Ô‚ÅˆÚ“®—Ê‚ª‚ ‚Á‚½‚çˆÚ“®ó‘Ô‚É‚·‚é
-		if (rigid->velocity().x != 0.0f)
-			PlayerState::move;
-
-	case PlayerState::move:
-		//	“ü—Í”»’è&ˆÚ“®—Êİ’è
-		GetComponent<InputMove>()->Update();
-
-		break;
-	}
-
-
-	//	ˆÚ“®ˆ—
-	rigid->Update();
-
+	GameObject::Update();
 }
 
 void Player::Render()

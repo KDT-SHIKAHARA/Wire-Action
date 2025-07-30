@@ -14,6 +14,7 @@ class RigidbodyComp :public Component {
 	Vector2D<float> gravity_;		//	重力（横方向にも対応できるように）
 	Vector2D<float> totalForce_;	//	クラス外の移動量の全て(移動、ワイヤーなど)
 	float damping_;					//	減衰量
+	const float speed_max_ = 1000.0f;
 public:
 	Flag isGravity_;				//	重力フラグ true: 重力加算 false: 無重力
 	Flag isGrounded_;				//	地面に設置判定　true: 設置している	false:設置してない

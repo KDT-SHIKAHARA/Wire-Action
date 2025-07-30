@@ -3,10 +3,14 @@
 #include"Time.h"
 #include<cmath>
 #include<algorithm>
+#include"DebugLog.h"
 
 RigidbodyComp::RigidbodyComp(float arg_mass , Flag arg_isGravity, Flag arg_isStatic)
-	:mass_(arg_mass), velocity_(0,0), acceleration_(0,0), gravity_(0,0), totalForce_(0,0), damping_(0.5), isGravity_(arg_isGravity), isGrounded_(false),isStatic_(arg_isStatic)
-{}
+	:mass_(arg_mass), velocity_(0,0), acceleration_(0,0), gravity_(0,0), totalForce_(0,0), damping_(1.0), isGravity_(arg_isGravity), isGrounded_(false),isStatic_(arg_isStatic)
+{
+	DebugLog::AddDubug("velocity_x: ", velocity_.x);
+
+}
 
 /// <summary>
 /// 外力の追加
@@ -37,6 +41,7 @@ void RigidbodyComp::Update(){
 
 	////	減衰量の範囲制限
 	damping_ = std::clamp(damping_, 0.0f, 1.0f);
+
 
 	//	親のweak_ptrをlockして取得
 	auto GameObj = GetGameObj();
@@ -69,6 +74,10 @@ void RigidbodyComp::Update(){
 
 	//	減衰量 (等倍 - 減衰量)
 	velocity_.x *= (1.0f - damping_);
+
+	//	X軸の移動量の制限
+	velocity_.x = std::clamp(velocity_.x, -speed_max_, speed_max_);
+
 
 	//	移動処理は、別の場所で行って移動量だけ保存するクラスにする。
 

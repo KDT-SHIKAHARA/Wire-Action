@@ -61,7 +61,7 @@ namespace status {
 
 
 
-		//	HPŠ„‡
+		//	¶‘¶”»’è
 		explicit operator bool() const { return is_alive(); }
 
 

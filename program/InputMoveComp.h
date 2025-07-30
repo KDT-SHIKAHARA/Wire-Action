@@ -11,5 +11,5 @@ public:
 	Flag isInput = true;	
 private:
 	//	1•bŠÔ‚ÌˆÚ“®‘¬“x
-	static constexpr float move_speed_ = 500.0f;
+	const float move_speed_ = 500.0f;
 };
