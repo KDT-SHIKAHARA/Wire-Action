@@ -159,6 +159,13 @@ void MapManager::CheckCollision(const std::vector<std::shared_ptr<GameObject>>& 
 
 }
 
+bool MapManager::CheckPointHit(const Vector2D<float>& anchor_pos)
+{
+	//	
+
+	return false;
+}
+
 /// <summary>
 /// ファイルからファイルパスを読み込んで
 /// ファイルから画像を読み込む

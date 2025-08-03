@@ -1,0 +1,7 @@
+﻿  DiveWireController.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\DiveWireController.h(12,13): error C2146: 構文エラー: ';' が、識別子 'diveWire' の前に必要です。
+  (ソース ファイル 'program/DiveWireController.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\DiveWireController.h(13,2): error C2143: 構文エラー: ';' が '}' の前にありません。
+  (ソース ファイル 'program/DiveWireController.cpp' をコンパイルしています)
+  

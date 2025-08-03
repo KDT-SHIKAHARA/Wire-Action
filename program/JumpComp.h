@@ -1,5 +1,6 @@
 #pragma once
 #include"Component.h"
+#include"flag.h"
 
 
 /// <summary>
@@ -11,5 +12,9 @@ public:
 	/// ƒL[ó‘Ô‚ÌQÆ‚ÆˆÚ“®—Ê‚Ìİ’è
 	/// </summary>
 	void Update()override;
+
+private:
+	const float jump_velocity_ = -300.0f;
+
 
 };

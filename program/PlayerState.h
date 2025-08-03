@@ -1,6 +1,7 @@
 #pragma once
 #include"Component.h"
 #include"hp.h"
+#include"DebugLog.h"
 
 
 #define _P_STATE  PlayerStateComp::State
@@ -25,13 +26,18 @@ public:
 
 	//	‰Šú‰»
 	PlayerStateComp(const status::HP& hp, State state = State::Idle)
-		:hp_(hp),state_(state){ }
+		:hp_(hp),state_(state)
+	{
+		DebugLog::AddDubug("player state:", static_cast<int>(state_));
+	}
 
 	virtual ~PlayerStateComp() = default;
 
 
 	//	ó‘Ôİ’è
-	void SetState(State state) { state_ = state; }
+	void SetState(State state) { 
+		state_ = state; 
+	}
 
 	//	ó‘Ôæ“¾
 	State GetState()const { return state_; }

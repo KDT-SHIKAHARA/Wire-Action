@@ -2,6 +2,8 @@
 #include"GameObject.h"
 #include"RigidbodyComp.h"
 #include"InputMoveComp.h"
+#include"DebugLog.h"
+#include "dive wire.h"
 
 /// <summary>
 /// stateコンポーネントの取得
@@ -9,6 +11,7 @@
 void StateController::Start()
 {
 	state_ = GetGameObj()->GetComponent<PlayerStateComp>();
+
 }
 
 
@@ -29,7 +32,7 @@ void StateController::Update(){
 
 		//	移動量がなかったら待機状態にする
 		if (vector.x == 0.0f) {
-			state = _P_STATE::Idle;
+			state_->SetState(_P_STATE::Idle);
 		}
 		break;
 	}
@@ -39,11 +42,19 @@ void StateController::Update(){
 
 		//	着地していたら待機状態にする
 		if (isGround) {
-			state = _P_STATE::Idle;
-		}
+			state_->SetState(_P_STATE::Idle);
+ 		}
 		break;
 
 	}
+
+	case _P_STATE::dive:
+		const auto& dive_wire = GetGameObj()->GetComponent<DiveWire>();
+		if (!dive_wire)return;
+		if (dive_wire->IsFinished()) {
+			state_->SetState(_P_STATE::Idle);
+		}
+		break;
 
 	}
 

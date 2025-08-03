@@ -5,6 +5,7 @@
 #include<type_traits>	//	型情報調べるため
 #include"transform.h"	//	座標系
 #include"Component.h"
+#include"flag.h"
 
 //	改良するならメモを参考にしてください
 //	メモ 
@@ -24,6 +25,7 @@ class GameObject :public std::enable_shared_from_this<GameObject> {
 	Component_map components_;	//	コンポーネント一覧
 public:
 	Transform transform;	//	座標系直接座標などにアクセスできないのでpublicで
+	Flag isDestroyed = false;	//	消滅判定
 
 	GameObject() = default;
 	virtual ~GameObject() = default;

@@ -37,6 +37,15 @@ public:
 
 	}
 
+	//	ダイブワイヤー
+	void RequestDiveWire() {
+		if (!state_) return;
+		if (CanDiveWire()) {
+			//	状態の変更
+			state_->SetState(_P_STATE::dive);
+		}
+	}
+
 	//	状態変更可能判定
 	//	ジャンプ
 	bool CanJump()const {
@@ -51,6 +60,16 @@ public:
 			state == _P_STATE::Idle ||
 			state == _P_STATE::Move ||
 			state == _P_STATE::Jump;
+	}
+
+	//	ダイブワイヤー
+	bool CanDiveWire()const {
+		auto state = state_->GetState();
+		return
+			state == _P_STATE::Idle ||
+			state == _P_STATE::Move ||
+			state == _P_STATE::Jump;
+
 	}
 
 

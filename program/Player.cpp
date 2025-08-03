@@ -5,6 +5,7 @@
 #include "GetColor.h"
 #include "PlayerState.h"
 #include "PlayerStateController.h"
+#include "JumpComp.h"
 
 
 /// <summary>
@@ -27,6 +28,7 @@ void Player::SetComponent()
 	AddComponent<PlayerStateComp>(5);
 	auto stateCo = AddComponent<StateController>();
 	stateCo->Start();
+	AddComponent<JumpComp>();	//	ƒWƒƒƒ“ƒvˆ—
 
 }
 

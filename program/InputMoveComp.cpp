@@ -15,10 +15,10 @@ void InputMove::Update(){
 	auto state = GetGameObj()->GetComponent<StateController>();
 
 	//	入力に応じた移動量を設定する
-	auto rigit_ptr = GetGameObj()->GetComponent<RigidbodyComp>();
+	auto rigid_ptr = GetGameObj()->GetComponent<RigidbodyComp>();
 
 	//	必要なコンポーネントがついているか確認
-	if (!rigit_ptr || !state) return;
+	if (!rigid_ptr || !state) return;
 
 	//	実行不可なら処理を終了
 	if (!state->CanMove()) return;
@@ -26,13 +26,13 @@ void InputMove::Update(){
 
 	//	左
 	if (Input::IsKeyPressed(KEY_INPUT_A)) {
-		rigit_ptr->AddVelocity({ -move_speed_ ,0 });
+		rigid_ptr->AddVelocity({ -move_speed_ ,0 });
 		state->RequestMove();
 	}
 
 	//	右
 	if (Input::IsKeyPressed(KEY_INPUT_D)) {
-		rigit_ptr->AddVelocity({ move_speed_ ,0 });
+		rigid_ptr->AddVelocity({ move_speed_ ,0 });
 		state->RequestMove();
 	}
 }

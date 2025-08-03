@@ -155,13 +155,13 @@
     <Filter Include="Game\GameObjects\Player\state">
       <UniqueIdentifier>{33aa5d6f-5f13-48a3-b346-836b391a6f7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Player\dive wire">
+      <UniqueIdentifier>{0b746ea0-c1cb-45ad-8efa-e6c90a7806e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
       <Filter>system\GameLoop</Filter>
-    </ClInclude>
-    <ClInclude Include="program\DebugLog.h">
-      <Filter>system\Debug\Log</Filter>
     </ClInclude>
     <ClInclude Include="program\debugDef.h">
       <Filter>system\define\debug</Filter>
@@ -307,6 +307,15 @@
     <ClInclude Include="program\PlayerStateController.h">
       <Filter>Game\GameObjects\Player\state</Filter>
     </ClInclude>
+    <ClInclude Include="program\DebugLog.h">
+      <Filter>system\Debug\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="program\dive wire.h">
+      <Filter>Game\GameObjects\Player\dive wire</Filter>
+    </ClInclude>
+    <ClInclude Include="program\DiveWireController.h">
+      <Filter>Game\GameObjects\Player\dive wire</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -371,6 +380,15 @@
     </ClCompile>
     <ClCompile Include="program\PlayerStateController.cpp">
       <Filter>Game\GameObjects\Player\state</Filter>
+    </ClCompile>
+    <ClCompile Include="program\JumpComp.cpp">
+      <Filter>Game\GameObjects\Player\jump</Filter>
+    </ClCompile>
+    <ClCompile Include="program\dive wire.cpp">
+      <Filter>Game\GameObjects\Player\dive wire</Filter>
+    </ClCompile>
+    <ClCompile Include="program\DiveWireController.cpp">
+      <Filter>Game\GameObjects\Player\dive wire</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

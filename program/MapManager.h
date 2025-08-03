@@ -28,8 +28,13 @@ class MapManager:public Singleton<MapManager>{
 	std::string map_data_path_ = "res/map/data/map_data.txt";
 
 public:
-	//	当たり判定
+
+	//	GameObjectとの当たり判定
 	void CheckCollision(const std::vector<std::shared_ptr<GameObject>>& gameObjs);
+
+	//	点との当たり判定
+	bool CheckPointHit(const Vector2D<float>& anchor_pos);
+
 
 	//	マップデータの読込
 	void Load();
