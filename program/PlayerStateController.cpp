@@ -53,6 +53,7 @@ void StateController::Update(){
 		if (!dive_wire)return;
 		if (dive_wire->IsFinished()) {
 			state_->SetState(_P_STATE::Idle);
+			//	ゲームオブジェクトの停止した物理系のアクティブ化
 		}
 		break;
 

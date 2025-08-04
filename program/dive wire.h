@@ -9,21 +9,39 @@
 /// ダイブワイヤーの管理
 /// </summary>
 class DiveWire : public Component, public DrawableComp {
+
+
+
 public:
-	DiveWire();
+	DiveWire(const Vector2D<float>& gameObjPos);
 	virtual ~DiveWire() = default;
 
 	void Update()override;
 	void Render()override;
 
+	void Start();
 	bool IsFinished()const;
 
-	Vector2D<float> position()const { return pos_; };
+	//	リセット
+	void ReSet() {
+		isAnchored = false;
+		isFinished_ = true;
+	}
 
+	Vector2D<float> anchorPos()const { return anchorPos_; };
+
+	Flag isAnchored = false;	//	アンカーが固定されているかどうかの判定
 private:
-	Vector2D<float> pos_;
-
-	Flag isEnable;	
+	
+	const Vector2D<float>& basePos_;
+	Vector2D<float> anchorPos_;
+	Vector2D<float> velocity_;
+	double chargeFrame = 0;
+	const double kChargeFrameMax = 0.5;	//	発射するまでのcharge時間
+	float length_ = 0;
+	const float anchorSpeed_ = 100.0f;	//	アンカーの移動速度
+	const float kWireLength = 300.0f;	//	ワイヤーの最大の長さ
+	Flag isFinished_ = false;
 };
 
 

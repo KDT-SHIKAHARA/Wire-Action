@@ -159,6 +159,11 @@ void MapManager::CheckCollision(const std::vector<std::shared_ptr<GameObject>>& 
 
 }
 
+/// <summary>
+/// マップとワイヤーのアンカーが当たっているかどうかを判定する
+/// </summary>
+/// <param name="anchor_pos"> アンカー座標 </param>
+/// <returns> true: アンカー設置 false: 未設置 </returns>
 bool MapManager::CheckPointHit(const Vector2D<float>& anchor_pos)
 {
 	//	

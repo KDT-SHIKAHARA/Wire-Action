@@ -220,7 +220,7 @@ Vector2D<int> operator / (const Vector2D<T>& value_1, const int& value_2) {
 
 // distance
 template <typename T>
-T Get2Distance(Vector2D<T>& value_1, Vector2D<T>& value_2) {
+T Get2Distance(const Vector2D<T>& value_1, const Vector2D<T>& value_2) {
 	T x = value_1.x - value_2.x;
 	T y = value_1.y - value_2.y;
 	T distance = sqrtf(x * x + y * y);
