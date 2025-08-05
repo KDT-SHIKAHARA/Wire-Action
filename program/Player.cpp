@@ -6,7 +6,8 @@
 #include "PlayerState.h"
 #include "PlayerStateController.h"
 #include "JumpComp.h"
-
+#include "DiveWireController.h"
+#include "dive wire.h"
 
 /// <summary>
 /// ‰Šú‰»
@@ -29,7 +30,9 @@ void Player::SetComponent()
 	auto stateCo = AddComponent<StateController>();
 	stateCo->Start();
 	AddComponent<JumpComp>();	//	ƒWƒƒƒ“ƒvˆ—
-
+	auto diveWire = AddComponent<DiveWire>(transform.WorldPosition());
+	auto diveWirecontro = AddComponent<DiveWireController>();
+	diveWirecontro->Initialize(diveWire);
 }
 
 /// <summary>
@@ -46,4 +49,5 @@ void Player::Render()
 	const auto& size = GetComponent<ColliderComp>()->size();
 	DrawBoxAA(trans.x, trans.y, trans.x + size.x, trans.y + size.y,
 		RED, TRUE);
+	GameObject::Render();
 }

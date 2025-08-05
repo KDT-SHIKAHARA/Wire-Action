@@ -50,10 +50,13 @@ void StateController::Update(){
 
 	case _P_STATE::dive:
 		const auto& dive_wire = GetGameObj()->GetComponent<DiveWire>();
+		auto rigid = GetGameObj()->GetComponent<RigidbodyComp>();
 		if (!dive_wire)return;
+		if (!rigid) return;
 		if (dive_wire->IsFinished()) {
 			state_->SetState(_P_STATE::Idle);
-			//	ゲームオブジェクトの停止した物理系のアクティブ化
+			rigid->isStatic_.Set(false);
+			dive_wire->ReSet();
 		}
 		break;
 

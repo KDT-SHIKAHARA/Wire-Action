@@ -4,7 +4,9 @@
 #include "GameObject.h"
 #include "PlayerStateController.h"
 #include "Time.h"
-
+#include "dxlib.h"
+#include "GetColor.h"
+#include "ColliderComp.h"
 
 DiveWire::DiveWire(const Vector2D<float>& gameObjPos):basePos_(gameObjPos)
 {
@@ -12,6 +14,13 @@ DiveWire::DiveWire(const Vector2D<float>& gameObjPos):basePos_(gameObjPos)
 
 void DiveWire::Update()
 {
+	//	停止して、移動などもできない状態で設置判定まで行うので
+	// 座標の更新は一旦なくす
+
+	
+	////	座標の取得
+	//gameObjPos_ = GetGameObj()->transform.WorldPosition();
+
 	//	今の状態を見る
 	auto state = GetGameObj()->GetComponent<PlayerStateComp>();
 	if (!state)return;
@@ -27,10 +36,11 @@ void DiveWire::Update()
 	//	アンカーが設置されていなかったら移動処理をする
 	if (!isAnchored) {
 		//	正規化した移動ベクトル * 移動速度(1秒間の移動速度 * 1Fの時間)
-		anchorPos_ += (velocity_ * (anchorSpeed_ * Time::deltaTime()));
+		anchorPos_ += (velocity_ * anchorSpeed_) * Time::deltaTime();
+		
 
 		//	長さの取得
-		length_ = Get2Distance<float>(anchorPos_, basePos_);
+		length_ = Get2Distance<float>(anchorPos_, gameObjPos_);
 
 		//	設置判定をする
 		if (MapManager::Instance().CheckPointHit(anchorPos_)) {
@@ -52,19 +62,27 @@ void DiveWire::Update()
 
 void DiveWire::Render()
 {
+
+	auto state = GetGameObj()->GetComponent<PlayerStateComp>();
+	if (!state)return;
+	if (state->GetState() != _P_STATE::dive) return;
+
+	DrawLineAA(gameObjPos_.x, gameObjPos_.y, anchorPos_.x, anchorPos_.y,
+		SKYBLUE);
 }
 
 /// <summary>
 /// 移動ベクトルの計算
 /// </summary>
 void DiveWire::Start() {
-	anchorPos_ = basePos_;
-	velocity_ = Vector2D<float>{ Input::MouseX(),Input::MouseY() } - basePos_;
+	auto size = GetGameObj()->GetComponent<ColliderComp>()->size();
+	anchorPos_ = gameObjPos_ = (GetGameObj()->transform.WorldPosition() + (size / 2));
+	velocity_ = Vector2D<float>{ (float)Input::MouseX(),(float)Input::MouseY() } - gameObjPos_;
 	velocity_.Normalize();
 }
 
 
 bool DiveWire::IsFinished() const
 {
-	return false;
+	return isFinished_;
 }
