@@ -158,6 +158,9 @@
     <Filter Include="Game\GameObjects\Player\dive wire">
       <UniqueIdentifier>{0b746ea0-c1cb-45ad-8efa-e6c90a7806e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="function">
+      <UniqueIdentifier>{f98a73aa-0140-42df-93e2-4fe388bae768}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -198,9 +201,6 @@
     </ClInclude>
     <ClInclude Include="program\TextureResourceMng.h">
       <Filter>system\resource\texture</Filter>
-    </ClInclude>
-    <ClInclude Include="program\vector2d.h">
-      <Filter>system\valueTypes</Filter>
     </ClInclude>
     <ClInclude Include="program\flag.h">
       <Filter>system\valueTypes</Filter>
@@ -315,6 +315,9 @@
     </ClInclude>
     <ClInclude Include="program\DiveWireController.h">
       <Filter>Game\GameObjects\Player\dive wire</Filter>
+    </ClInclude>
+    <ClInclude Include="program\vector2d.h">
+      <Filter>system\Math2D</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

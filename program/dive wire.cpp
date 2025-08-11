@@ -7,8 +7,9 @@
 #include "dxlib.h"
 #include "GetColor.h"
 #include "ColliderComp.h"
+#include "RigidbodyComp.h"
 
-DiveWire::DiveWire(const Vector2D<float>& gameObjPos):basePos_(gameObjPos)
+DiveWire::DiveWire()
 {
 }
 
@@ -23,12 +24,14 @@ void DiveWire::Update()
 
 	//	今の状態を見る
 	auto state = GetGameObj()->GetComponent<PlayerStateComp>();
-	if (!state)return;
+	auto rigid = GetGameObj()->GetComponent<RigidbodyComp>();
+
+	if (!state || !rigid)return;
 	if (state->GetState() != _P_STATE::dive) return;
 
 	//	アンカー発射までの待ち時間
-	if (chargeFrame < kChargeFrameMax) {
-		chargeFrame += Time::deltaTime();
+	if (chargeFrame_ < kChargeFrameMax_) {
+		chargeFrame_ += Time::deltaTime();
 		return;
 	}
 
@@ -36,7 +39,7 @@ void DiveWire::Update()
 	//	アンカーが設置されていなかったら移動処理をする
 	if (!isAnchored) {
 		//	正規化した移動ベクトル * 移動速度(1秒間の移動速度 * 1Fの時間)
-		anchorPos_ += (velocity_ * anchorSpeed_) * Time::deltaTime();
+		anchorPos_ += (velocity_ * kAnchorSpeed_) * Time::deltaTime();
 		
 
 		//	長さの取得
@@ -47,15 +50,46 @@ void DiveWire::Update()
 			isAnchored = true;
 		}
 		//	設置されていなくて、長さが最大を越していたら処理を終了する
-		else if (length_ >= kWireLength) {
+		else if (length_ >= kWireLength_) {
 			isFinished_ = true;
 		}
 	}
 	//	アンカーが設置されていたら
 	else {
-		//	GameObjectを移動させる
+
+		////	判定フラグを確認 true: 終了
+		//if (isFinished_) {
+		//	return;
+		//}
 
 
+		
+
+		//	現在の座標取得
+		gameObjPos_ = (GetGameObj()->transform.WorldPosition() + (size_ / 2));
+
+		//	移動ベクトルの計算
+		Vector2D<float> tmp_velocity = anchorPos_ - gameObjPos_;
+
+		//	正規化
+		tmp_velocity.Normalize();
+
+		//	二点間の距離と長さの計算
+		float length = Get2Distance(anchorPos_, gameObjPos_);
+
+		//	移動する実際の距離
+		float gameObjSpeed = kGameObjectSpeed_;
+
+		//	移動する距離とアンカーと座標の距離の計算
+		tmp_velocity = tmp_velocity * gameObjSpeed;
+
+		//	移動量セット
+		rigid->SetVelocity(tmp_velocity);
+
+		//	ワイヤー状態を解除するかどうかの判定
+		if (MapManager::Instance().CheckAABB(GetGameObj())) {
+			isFinished_ = true;
+		}
 
 	}
 }
@@ -69,14 +103,37 @@ void DiveWire::Render()
 
 	DrawLineAA(gameObjPos_.x, gameObjPos_.y, anchorPos_.x, anchorPos_.y,
 		SKYBLUE);
+
+	//	アンカー発射までの時間の時だけ
+	if (chargeFrame_ < kChargeFrameMax_) {
+		
+		//	周りに浮いている型の数を計算
+		int cir_num = static_cast<int>(chargeFrame_ / (cir_one_frame));
+
+		//	チャージ中の弾を描画
+		SetDrawBlendMode(DX_BLENDMODE_ALPHA, 200);
+		for (int i = 0; i <= cir_num; i++) {
+			//	float angleDeg = (360.0f / cir_num) * i; 
+			//	のcir_num にすれば動作するたびに１つ当たりの角度が変化しないので
+			//	治りますが、見た目的にこっちのほうがかっこいいのでこれにします。
+			//	by 2025.8.11に自分より
+			float angleDeg = (360.0f / cir_num) * i;
+			Vector2D<float> pos = GetPointFromAngle(gameObjPos_, cir_distance, angleDeg);
+			
+			DrawCircle(pos.x, pos.y, 5, BLUE, SKYBLUE);
+			
+		}
+		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
+	}
+
 }
 
 /// <summary>
 /// 移動ベクトルの計算
 /// </summary>
 void DiveWire::Start() {
-	auto size = GetGameObj()->GetComponent<ColliderComp>()->size();
-	anchorPos_ = gameObjPos_ = (GetGameObj()->transform.WorldPosition() + (size / 2));
+	//auto size = GetGameObj()->GetComponent<ColliderComp>()->size();
+	anchorPos_ = gameObjPos_ = (GetGameObj()->transform.WorldPosition() + (size_ / 2));
 	velocity_ = Vector2D<float>{ (float)Input::MouseX(),(float)Input::MouseY() } - gameObjPos_;
 	velocity_.Normalize();
 }

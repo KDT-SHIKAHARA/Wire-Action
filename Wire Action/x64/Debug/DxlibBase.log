@@ -1,7 +1,20 @@
 ﻿  dive wire.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.h(52,58): warning C4305: '初期化中': 'double' から 'const float' へ切り詰めます。
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+  
 C:\Users\kirit\source\repos\Wire-Action\program\hp.h(47,21): warning C4244: 'return': 'int' から 'float' への変換です。データが失われる可能性があります。
   (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
   
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,25): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,25): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,25): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,25): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,25): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,18): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,18): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,18): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,18): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(123,18): warning C4244:         ]
 C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
 C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         with
 C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C4244:         [
@@ -14,7 +27,7 @@ C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20): warning C424
   (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
       C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(165,20):
       テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(39,44):
+          C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.h(36,53):
           コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator *<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
           with
           [
@@ -44,7 +57,7 @@ C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(216,20): warning C424
   (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
       C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(216,20):
       テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
-          C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(79,78):
+          C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(69,67):
           コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
   
 C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(217,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。

@@ -35,6 +35,8 @@ public:
 	//	点との当たり判定
 	bool CheckPointHit(const Vector2D<float>& anchor_pos);
 
+	//	
+	bool CheckAABB(std::shared_ptr<GameObject> gameObj);
 
 	//	マップデータの読込
 	void Load();

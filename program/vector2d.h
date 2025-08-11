@@ -243,3 +243,18 @@ Vector2D<T> SetTarget(const Vector2D<T>& Pos,const Vector2D<T>& TargetPos) {
 	return temp;
 
 }
+
+/// <summary>
+/// 基準座標(origin)から、指定した角度(angleDeg)と距離(distance)で求めた座標を返す。
+/// </summary>
+/// <param name="origin">基準座標</param>
+/// <param name="angleDeg">角度（度数法）</param>
+/// <param name="distance">距離</param>
+/// <returns>計算後の座標</returns>
+template<typename T>
+Vector2D<T> GetPointFromAngle(const Vector2D<T>& center,float distance,float angleDeg) {
+	float rad = angleDeg * PI / 180.0f;
+	//	
+	return { center.x + std::cos(rad) * distance,
+			 center.y + std::sin(rad) * distance };
+}

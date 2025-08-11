@@ -24,13 +24,14 @@ void Player::SetComponent()
 {
 	transform.SetPosition(Vector2D<float>(500, 100));
 	auto rigid = AddComponent<RigidbodyComp>();	//	•¨—
-	AddComponent<ColliderComp>(Vector2D<float>{ 50, 70 });
+	auto collider = AddComponent<ColliderComp>(Vector2D<float>{ 50, 70 });
 	AddComponent<InputMove>();		//	“ü—ÍˆÚ“®
 	AddComponent<PlayerStateComp>(5);
 	auto stateCo = AddComponent<StateController>();
 	stateCo->Start();
 	AddComponent<JumpComp>();	//	ƒWƒƒƒ“ƒvˆ—
-	auto diveWire = AddComponent<DiveWire>(transform.WorldPosition());
+	auto diveWire = AddComponent<DiveWire>();
+	diveWire->Initialize(collider->size());
 	auto diveWirecontro = AddComponent<DiveWireController>();
 	diveWirecontro->Initialize(diveWire);
 }
