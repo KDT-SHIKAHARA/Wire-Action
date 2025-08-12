@@ -8,6 +8,7 @@
 #include "JumpComp.h"
 #include "DiveWireController.h"
 #include "dive wire.h"
+#include "Camera.h"
 
 /// <summary>
 /// èâä˙âª
@@ -46,9 +47,17 @@ void Player::Update()
 
 void Player::Render()
 {
+
+	//	ÉJÉÅÉâç¿ïW
+	Vector2D<float> camera_pos = Camera::Instance().position();
+	Vector2D<float> camera_size = Camera::Instance().area_size();
+
 	const auto& trans = transform.WorldPosition();
 	const auto& size = GetComponent<ColliderComp>()->size();
-	DrawBoxAA(trans.x, trans.y, trans.x + size.x, trans.y + size.y,
+
+	Vector2D<float> draw = trans - camera_pos + (camera_size / 2);
+
+	DrawBoxAA(draw.x, draw.y, draw.x + size.x, draw.y + size.y,
 		RED, TRUE);
 	GameObject::Render();
 }

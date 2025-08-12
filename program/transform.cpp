@@ -48,7 +48,7 @@ void Transform::SetParent(const std::shared_ptr<Transform>& arg_new_parent){
 /// <returns> 実際の座標 </returns>
 Vector2D<float> Transform::WorldPosition() const{
 	//	親ポインタ取得
-	const auto& parent_ptr = parent();
+	auto parent_ptr = parent();
 	//	存在していなかったら座標を返す
 	if (!parent_ptr) return position_;
 	//	存在していたら親の角度を基準として座標分足す。

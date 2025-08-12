@@ -8,6 +8,7 @@
 #include "GetColor.h"
 #include "ColliderComp.h"
 #include "RigidbodyComp.h"
+#include "Camera.h"55
 
 DiveWire::DiveWire()
 {
@@ -101,7 +102,15 @@ void DiveWire::Render()
 	if (!state)return;
 	if (state->GetState() != _P_STATE::dive) return;
 
-	DrawLineAA(gameObjPos_.x, gameObjPos_.y, anchorPos_.x, anchorPos_.y,
+	const auto& camera_pos = Camera::Instance().position();
+	const auto& camera_size = Camera::Instance().area_size();
+
+	float screen_gameObjX = gameObjPos_.x - camera_pos.x + camera_size.x / 2;
+	float screen_gameObjY = gameObjPos_.y - camera_pos.y + camera_size.y / 2;
+	float screen_anchorX = anchorPos_.x - camera_pos.x + camera_size.x / 2;
+	float screen_anchorY = anchorPos_.y - camera_pos.y + camera_size.y / 2;
+
+	DrawLineAA(screen_gameObjX, screen_gameObjY, screen_anchorX, screen_anchorY,
 		SKYBLUE);
 
 	//	アンカー発射までの時間の時だけ
@@ -120,7 +129,12 @@ void DiveWire::Render()
 			float angleDeg = (360.0f / cir_num) * i;
 			Vector2D<float> pos = GetPointFromAngle(gameObjPos_, cir_distance, angleDeg);
 			
-			DrawCircle(pos.x, pos.y, 5, BLUE, SKYBLUE);
+			// posもスクリーン座標に変換
+			float screen_posX = pos.x - camera_pos.x + camera_size.x / 2;
+			float screen_posY = pos.y - camera_pos.y + camera_size.y / 2;
+
+
+			DrawCircle(screen_posX, screen_posY, 5, BLUE, SKYBLUE);
 			
 		}
 		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
@@ -134,7 +148,11 @@ void DiveWire::Render()
 void DiveWire::Start() {
 	//auto size = GetGameObj()->GetComponent<ColliderComp>()->size();
 	anchorPos_ = gameObjPos_ = (GetGameObj()->transform.WorldPosition() + (size_ / 2));
-	velocity_ = Vector2D<float>{ (float)Input::MouseX(),(float)Input::MouseY() } - gameObjPos_;
+	Vector2D<float> mosue = { (float)Input::MouseX(),(float)Input::MouseY() };
+	const Vector2D<float>& camera_pos = Camera::Instance().position();
+	const Vector2D<float>& camera_size = Camera::Instance().area_size();
+	Vector2D<float> world_mouse = camera_pos - camera_size / 2.f + mosue;
+	velocity_ = world_mouse - gameObjPos_;
 	velocity_.Normalize();
 }
 

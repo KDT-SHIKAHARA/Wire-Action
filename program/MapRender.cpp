@@ -18,16 +18,22 @@ void MapRender::LoadTexture(const std::unordered_map<int, std::string>& tiles_fi
 /// </summary>
 /// <param name="mapData"> マップデータのコレクションを格納したクラス </param>
 /// <param name="camera">  </param>
-void MapRender::Render(const MapData& mapData, const Camera& camera) {
-	Vector2D<float> camera_pos = camera.position();
-	Vector2D<float> camera_size = camera.area_size();
+void MapRender::Render(const MapData& mapData) {
+	Vector2D<float> camera_pos = Camera::Instance().position();
+	Vector2D<float> camera_size = Camera::Instance().area_size();
 	int map_size = mapData.GetTileSize();
 
 	//	マップの描画範囲の左上と右下の番号取得
-	int left   =	(camera_pos.x - camera_size.x / 2) / map_size;
-	int right =		(camera_pos.x + camera_size.x / 2) / map_size;
-	int top =		(camera_pos.y - camera_size.y / 2) / map_size;
-	int bottom =	(camera_pos.y + camera_size.y / 2) / map_size;
+	
+	//int left   =	(camera_pos.x - camera_size.x / 2) / map_size;
+	//int right =		(camera_pos.x + camera_size.x / 2) / map_size;
+	//int top =		(camera_pos.y - camera_size.y / 2) / map_size;
+	//int bottom =	(camera_pos.y + camera_size.y / 2) / map_size;
+
+	int left = static_cast<int>(std::floor((camera_pos.x - camera_size.x / 2) / map_size));
+	int right = static_cast<int>(std::ceil((camera_pos.x + camera_size.x / 2) / map_size));
+	int top = static_cast<int>(std::floor((camera_pos.y - camera_size.y / 2) / map_size));
+	int bottom = static_cast<int>(std::ceil((camera_pos.y + camera_size.y / 2) / map_size));
 
 	//	必要箇所のみ描画
 	for (int y = top; y <= bottom; y++) {
@@ -41,9 +47,11 @@ void MapRender::Render(const MapData& mapData, const Camera& camera) {
 			if (tile.id == 0) continue;
 
 			//	描画座標の取得
-			int drawX = x * map_size - camera_pos.x + camera_size.x / 2;
-			int drawY = y * map_size - camera_pos.y + camera_size.y / 2;
+			//int drawX = x * map_size - (camera_pos.x + camera_size.x / 2);
+			//int drawY = y * map_size - (camera_pos.y + camera_size.y / 2);
 
+			int drawX = static_cast<int>(x * map_size - camera_pos.x + camera_size.x / 2);
+			int drawY = static_cast<int>(y * map_size - camera_pos.y + camera_size.y / 2);
 			//	描画
 			if (tile.id > 1) {
 				int a = 0;

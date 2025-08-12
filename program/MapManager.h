@@ -42,5 +42,15 @@ public:
 	void Load();
 
 	//	•`‰æ
-	void Render(const Camera& camera);
+	void Render();
+
+	Vector2D<int> ChipNum() {
+		return Vector2D<int> { mapData_.GetMapW(), mapData_.GetMapH() };
+	}
+
+	int ChipSize() {
+		return mapData_.GetTileSize();
+	}
+
+
 };

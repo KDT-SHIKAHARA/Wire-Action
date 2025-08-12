@@ -16,10 +16,7 @@ public:
 	T x;
 	T y;
 
-	Vector2D() {
-
-	}
-	Vector2D(T arg_x, T arg_y) {
+	Vector2D(T arg_x = 0, T arg_y = 0) {
 		x = arg_x;
 		y = arg_y;
 	}

@@ -213,11 +213,11 @@ void MapManager::Load() {
 /// 描画
 /// </summary>
 /// <param name="camera"> カメラクラスの座標を取得 </param>
-void MapManager::Render(const Camera& camera) {
+void MapManager::Render() {
 	try
 	{
 		//	描画
-		render_.Render(mapData_, camera);
+		render_.Render(mapData_);
 
 	}
 	catch (const std::exception&)

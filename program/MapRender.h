@@ -13,7 +13,7 @@ public:
 	void LoadTexture(const std::unordered_map<int, std::string>& tiles_file_path);
 
 
-	void Render(const MapData& mapData, const Camera& camera);
+	void Render(const MapData& mapData);
 private:
 	TexturePtr_map tile_textures_;	//	タイル画像のコレクション
 };

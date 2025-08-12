@@ -21,7 +21,7 @@ class Transform :public std::enable_shared_from_this<Transform> {
 
 public:	
 	Transform() 
-		:position_({ 0,0 }), rotation_(0.0f), scale_({ 0.0f,0.0f }){ }
+		:position_({ 0,0 }), rotation_(0.0f), scale_({ 1.0f,1.0f }){ }
 
 	//	デバック
 	static inline float ToDeg(float rad) { return rad * (180.0f / 3.1415926f); }

@@ -53,14 +53,30 @@ public:
 		dubugList.emplace_back(std::make_unique<DebugDisp<T>>(arg_label, arg_value));
 	}
 
+	template<typename T>
+	void Log(const std::string& arg_label,  T arg_value,int x,int y) {
+		if (isDisp) return;
+
+		std::string str;
+		{
+			std::ostringstream oss;
+			oss << arg_label << ": " << arg_value;
+			str = oss.str();
+		}
+
+
+		DrawFormatString(x, y, GetColor(255, 0, 0), "%s", str.c_str());
+	}
+
 	//	更新
 	void Update() {
 		//	表示切替
 		if (Input::IsKeyOn(KEY_INPUT_F1))
 			isDisp.Toggle();
+			
 
 		//	スクロール可能切り替え
-		if (Input::IsKeyOn(KEY_INPUT_F2))
+		if (Input::IsKeyOn(KEY_INPUT_F3))
 			isScroll.Toggle();
 
 		//	表示判定
@@ -74,17 +90,19 @@ public:
 
 	//	表示
 	void Render() {
-		if (!isDisp) return;
+		if (!isDisp)return;
+			int draw_y = y_;
+			for (const auto& it : dubugList) {
+				const auto& str = it->GetString();
+				DrawFormatString(x_, draw_y + listScroolY_, GetColor(255, 0, 0), "%s", str.c_str());
+				draw_y += kTextSpacing;
+			}
 
-		int draw_y = y_;
-		for (const auto& it : dubugList) {
-			const auto& str = it->GetString();
-			DrawFormatString(x_, draw_y + listScroolY_, GetColor(255, 0, 0), "%s", str.c_str());
-			draw_y += kTextSpacing;
-		}
+			if (!isScroll) return;
+			DrawString(0, 40, "スクロール固定中", GetColor(255, 0, 0));
 
-		if (!isScroll) return;
-		DrawString(0, 40, "スクロール固定中", GetColor(255, 0, 0));
+	
+
 	}
 
 private:
@@ -93,6 +111,7 @@ private:
 	const int x_,y_;	//	基準座標
 	int listScroolY_;	//	マウスホイールの入力量
 	int debugListMaxY_;
+	int log_num_ = 0;
 	Flag isDisp;	//	表示をするかどうかのフラグ
 	Flag isScroll;	//	デバックのスクロールを可能にするかどうか
 };
@@ -118,6 +137,11 @@ public:
 	void AddDubug(const std::string& arg_label, const T& arg_value) {
 	}
 
+	template<typename T>
+	static void Log(const std::string& arg_label, T arg_value, int x, int y) {
+	}
+
+
 	//	更新
 	void Update() {
 	}
@@ -136,6 +160,11 @@ public:
 	template<typename T>
 	static void AddDubug(const std::string& arg_label, const T& arg_value) {
 		DebugDispManager::Instance().AddDubug(arg_label, arg_value);
+	}
+
+	template<typename T>
+	static void Log(const std::string& arg_label, T arg_value, int x, int y) {
+		DebugDispManager::Instance().Log(arg_label, arg_value,x,y);
 	}
 
 };
