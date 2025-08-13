@@ -46,6 +46,17 @@ public:
 		}
 	}
 
+
+	//	攻撃
+	void RequestAttack() {
+		if (!state_) return;
+		if (CanAttack()) {
+			//	状態の変更
+			state_->SetState(_P_STATE::Attack);
+		}
+	}
+
+
 	//	状態変更可能判定
 	//	ジャンプ
 	bool CanJump()const {
@@ -72,6 +83,14 @@ public:
 
 	}
 
+	//	攻撃
+	bool CanAttack()const {
+		auto state = state_->GetState();
+		return
+			state == _P_STATE::Idle ||
+			state == _P_STATE::Move ||
+			state == _P_STATE::Jump;
+	}
 
 
 private:

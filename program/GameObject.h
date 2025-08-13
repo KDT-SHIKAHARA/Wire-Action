@@ -23,6 +23,7 @@
 class GameObject :public std::enable_shared_from_this<GameObject> {
 	using Component_map = std::unordered_map<std::type_index, std::shared_ptr<Component>>;	//	型が長いので。
 	Component_map components_;	//	コンポーネント一覧
+	std::string tag_;	//	識別用タグ
 public:
 	Transform transform;	//	座標系直接座標などにアクセスできないのでpublicで
 	Flag isDestroyed = false;	//	消滅判定
@@ -49,6 +50,9 @@ public:
 	virtual void Render();
 
 
+	//	tag
+	void SetTag(const std::string& tag) { tag_ = tag; }
+	const std::string& GetTag()const { return tag_; }
 
 };
 

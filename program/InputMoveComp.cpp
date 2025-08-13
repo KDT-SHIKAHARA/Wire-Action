@@ -23,16 +23,31 @@ void InputMove::Update(){
 	//	実行不可なら処理を終了
 	if (!state->CanMove()) return;
 
+	////	上
+	//if (Input::IsKeyPressed(KEY_INPUT_W)) {
+	//	if (!rigid_ptr->isGrounded_)return;
+	//	GetGameObj()->transform.SetRotation(90.0f * DegToRad);
+	//}
+
+
+	////	下
+	//if (Input::IsKeyPressed(KEY_INPUT_W)) {
+	//	//	着地していたら下方向にしない
+	//	if (rigid_ptr->isGrounded_)return;
+	//	GetGameObj()->transform.SetRotation(270.0f * DegToRad);
+	//}
 
 	//	左
 	if (Input::IsKeyPressed(KEY_INPUT_A)) {
 		rigid_ptr->AddVelocity({ -move_speed_ ,0 });
+		GetGameObj()->transform.SetRotation(180.0f * DegToRad);
 		state->RequestMove();
 	}
 
 	//	右
 	if (Input::IsKeyPressed(KEY_INPUT_D)) {
 		rigid_ptr->AddVelocity({ move_speed_ ,0 });
+		GetGameObj()->transform.SetRotation(0.0f);
 		state->RequestMove();
 	}
 }

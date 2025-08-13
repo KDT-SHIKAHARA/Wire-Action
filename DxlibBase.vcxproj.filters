@@ -143,9 +143,6 @@
     <Filter Include="system\singleton">
       <UniqueIdentifier>{055c5db6-a384-4cb8-8028-185c6af60942}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\GameObjects\manager">
-      <UniqueIdentifier>{92f9dcc0-ded6-4642-96c2-1c434c7b5855}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\GameObjects\Player\move">
       <UniqueIdentifier>{10c8aca5-f15b-40ab-a4ff-406c7e10879d}</UniqueIdentifier>
     </Filter>
@@ -160,6 +157,18 @@
     </Filter>
     <Filter Include="function">
       <UniqueIdentifier>{f98a73aa-0140-42df-93e2-4fe388bae768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Player\sword">
+      <UniqueIdentifier>{f7945283-84c8-44f7-ab67-bfe7292859d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\GameObject\manager">
+      <UniqueIdentifier>{92f9dcc0-ded6-4642-96c2-1c434c7b5855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\component">
+      <UniqueIdentifier>{a164be00-61bb-4b89-aa99-703ee07202e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\animation">
+      <UniqueIdentifier>{17c842f2-0f02-4e26-a827-a646686fb41d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -293,7 +302,7 @@
       <Filter>system\singleton</Filter>
     </ClInclude>
     <ClInclude Include="program\GameObjectMgr.h">
-      <Filter>Game\GameObjects\manager</Filter>
+      <Filter>system\ECS\GameObject\manager</Filter>
     </ClInclude>
     <ClInclude Include="program\InputMoveComp.h">
       <Filter>Game\GameObjects\Player\move</Filter>
@@ -318,6 +327,21 @@
     </ClInclude>
     <ClInclude Include="program\vector2d.h">
       <Filter>system\Math2D</Filter>
+    </ClInclude>
+    <ClInclude Include="program\sword.h">
+      <Filter>Game\GameObjects\Player\sword</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Circle.h">
+      <Filter>system\Math2D</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SwordController.h">
+      <Filter>Game\GameObjects\Player\sword</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Angle.h">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Anim2D.h">
+      <Filter>system\animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -392,6 +416,12 @@
     </ClCompile>
     <ClCompile Include="program\DiveWireController.cpp">
       <Filter>Game\GameObjects\Player\dive wire</Filter>
+    </ClCompile>
+    <ClCompile Include="program\sword.cpp">
+      <Filter>Game\GameObjects\Player\sword</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Anim2D.cpp">
+      <Filter>system\animation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

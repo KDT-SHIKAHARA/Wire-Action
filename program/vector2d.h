@@ -3,11 +3,11 @@
 #include<DxLib.h>
 #include<cmath>
 
-namespace {
+
 #define PI        3.14159265f
 #define RadToDeg  57.29577951f
 #define DegToRad  0.017453293f
-}
+
 
 
 template <typename T>

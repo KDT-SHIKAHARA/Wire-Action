@@ -43,11 +43,11 @@ private:
 	Vector2D<float> velocity_;
 	Vector2D<float> size_;
 	double chargeFrame_ = 0;
-	static constexpr double kChargeFrameMax_ = 0.5;	//	発射するまでのcharge時間
+	static constexpr double kChargeFrameMax_ = 0.1;	//	発射するまでのcharge時間
 	float length_ = 0;
-	static constexpr float kAnchorSpeed_ = 1000.0f;	//	アンカーの移動速度
+	static constexpr float kAnchorSpeed_ = 3500.0f;	//	アンカーの移動速度
 	static constexpr float kGameObjectSpeed_ = 2000.0f;	//	移動速度
-	static constexpr float kWireLength_ = 400.0f;	//	ワイヤーの最大の長さ
+	static constexpr float kWireLength_ = 600.0f;	//	ワイヤーの最大の長さ
 	static constexpr int cir_max_ = 10;	//	アンカー発射までのチャージ中の弾の最大数
 	static constexpr float cir_one_frame = kChargeFrameMax_ / cir_max_;	//	弾の時間
 	static constexpr float cir_distance = 100;

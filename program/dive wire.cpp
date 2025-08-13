@@ -8,7 +8,7 @@
 #include "GetColor.h"
 #include "ColliderComp.h"
 #include "RigidbodyComp.h"
-#include "Camera.h"55
+#include "Camera.h"
 
 DiveWire::DiveWire()
 {
@@ -29,6 +29,11 @@ void DiveWire::Update()
 
 	if (!state || !rigid)return;
 	if (state->GetState() != _P_STATE::dive) return;
+
+	//	ワイヤーの中断処理
+	if (Input::IsKeyOn(KEY_INPUT_SPACE)) {
+		isFinished_ = true;
+	}
 
 	//	アンカー発射までの待ち時間
 	if (chargeFrame_ < kChargeFrameMax_) {
@@ -126,7 +131,9 @@ void DiveWire::Render()
 			//	のcir_num にすれば動作するたびに１つ当たりの角度が変化しないので
 			//	治りますが、見た目的にこっちのほうがかっこいいのでこれにします。
 			//	by 2025.8.11に自分より
+
 			float angleDeg = (360.0f / cir_num) * i;
+			//float angleDeg = (360.0f / cir_max_) * i;
 			Vector2D<float> pos = GetPointFromAngle(gameObjPos_, cir_distance, angleDeg);
 			
 			// posもスクリーン座標に変換

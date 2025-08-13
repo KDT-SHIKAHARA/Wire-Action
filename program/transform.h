@@ -7,6 +7,12 @@
 
 #define _XFORM_CREATE std::shared_ptr<Transform>(std::make_shared<Transform>())
 
+enum class Direction {
+	Right,
+	Left,
+	Up,
+	Down,
+};
 
 class Transform :public std::enable_shared_from_this<Transform> {
 	using Xform = std::shared_ptr<Transform>;	//	自分のshared_ptr
@@ -18,6 +24,8 @@ class Transform :public std::enable_shared_from_this<Transform> {
 	Vector2D<float> scale_;		//	スケール
 	Parent parent_;				//	親
 	Children children_;			//	子供
+
+	Direction angleTupe_ = Direction::Right;
 
 public:	
 	Transform() 
@@ -131,4 +139,11 @@ public:
 
 	//	デバックログに追加
 	void AddDebugLog(const std::string& label = "")const;
+
+
+	//	-----方向-----
+
+	//	角度から方向を取得
+	Direction GetAngleType();
+
 };

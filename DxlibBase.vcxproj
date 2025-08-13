@@ -148,7 +148,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="program\Angle.h" />
+    <ClInclude Include="program\Anim2D.h" />
     <ClInclude Include="program\Camera.h" />
+    <ClInclude Include="program\Circle.h" />
     <ClInclude Include="program\ColliderComp.h" />
     <ClInclude Include="program\Color.h" />
     <ClInclude Include="program\Component.h" />
@@ -192,6 +195,8 @@
     <ClInclude Include="program\SoundManager.h" />
     <ClInclude Include="program\SoundType.h" />
     <ClInclude Include="program\StatusAlias.h" />
+    <ClInclude Include="program\sword.h" />
+    <ClInclude Include="program\SwordController.h" />
     <ClInclude Include="program\SystemConfig.h" />
     <ClInclude Include="program\TestPlayer.h" />
     <ClInclude Include="program\TextureResource.h" />
@@ -203,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="library\tinyxml12\tinyxml2.cpp" />
+    <ClCompile Include="program\Anim2D.cpp" />
     <ClCompile Include="program\Camera.cpp" />
     <ClCompile Include="program\Color.cpp" />
     <ClCompile Include="program\DebugScene.cpp" />
@@ -224,6 +230,7 @@
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />
+    <ClCompile Include="program\sword.cpp" />
     <ClCompile Include="program\TestPlayer.cpp" />
     <ClCompile Include="program\transform.cpp" />
   </ItemGroup>

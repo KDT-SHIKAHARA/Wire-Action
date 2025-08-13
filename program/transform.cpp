@@ -1,6 +1,8 @@
 #include "transform.h"
 #include<cmath>
 #include"DebugLog.h"
+#include"GameObject.h"
+#include "RigidbodyComp.h"
 
 // ==================================================================
 // ファイル名	：transform.h
@@ -114,7 +116,7 @@ void Transform::SetWorldPosition(const Vector2D<float>& worldPosition){
 /// <param name="rad"></param>
 void Transform::SetWorldRotasion(float rad){
 	//	親ポインタ取得
-	const auto& parent_ptr = parent_.lock();
+	auto parent_ptr = parent_.lock();
 
 	//	parent_ptr がnullptrかどうか
 	//	true: 親から自分の回転分打ち消した角度　false: 角度をそのまま
@@ -132,7 +134,7 @@ void Transform::SetWorldScale(const Vector2D<float>& arg_scale){
 
 	//	parent_ptr がnullptrかどうか
 	/// true: 親のスケール / 自分のスケールでサイズ false: そのまま変更
-	scale_ = parent_ptr ? arg_scale : (arg_scale / parent_ptr->WorldScale());
+	scale_ = parent_ptr ? (arg_scale / parent_ptr->WorldScale()): arg_scale;
 }
 
 /// <summary>
@@ -206,6 +208,29 @@ void Transform::AddDebugLog(const std::string& label) const{
 	DebugLog::AddDubug(label + " scale.x:", scale_.x);
 	DebugLog::AddDubug(label + " scale.y:", scale_.y);
 	DebugLog::AddDubug(label + " HasParent:", HasParent());
+}
+
+//	向きを取得
+Direction Transform::GetAngleType()
+{
+
+	// 角度を -π ～ π の範囲に正規化
+	while (rotation_ <= -PI) rotation_ += 2 * PI;
+	while (rotation_ > PI) rotation_ -= 2 * PI;
+
+	if (rotation_ > -PI / 4 && rotation_ <= PI / 4) {
+		return Direction::Right;
+	}
+	else if (rotation_ > PI / 4 && rotation_ <= 3 * PI / 4) {
+		return Direction::Up;
+	}
+	else if (rotation_ <= -PI / 4 && rotation_ > -3 * PI / 4) {
+		return Direction::Down;
+	}
+	else {
+		// 残りは左方向（3π/4 ? π または -π ? -3π/4）
+		return Direction::Left;
+	}
 }
 
 
