@@ -38,7 +38,7 @@ public:
 	void Pause() { isPlaying_ = false; }
 	void Stop() { isPlaying_ = false;  current_ = 0; }
 	void SetPlayMode(PlayMode mode) { mode_ = mode; }
-	void SetDrawScale(float scale);
+	void SetDrawScale(float scale) { draw_scale_ = scale; }
 	void SetRotation(float rad) { rotation_rad_ = rad; }
 
 	void Update();
