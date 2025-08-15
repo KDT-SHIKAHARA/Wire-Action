@@ -5,7 +5,9 @@
 #include<type_traits>	//	型情報調べるため
 #include"transform.h"	//	座標系
 #include"Component.h"
+#include "DrawableComp.h"
 #include"flag.h"
+#include"tag.h"
 
 //	改良するならメモを参考にしてください
 //	メモ 
@@ -23,6 +25,7 @@
 class GameObject :public std::enable_shared_from_this<GameObject> {
 	using Component_map = std::unordered_map<std::type_index, std::shared_ptr<Component>>;	//	型が長いので。
 	Component_map components_;	//	コンポーネント一覧
+	std::vector<std::shared_ptr<DrawableComp>> drawableComps_;	//	描画系コンポーネント
 	std::string tag_;	//	識別用タグ
 public:
 	Transform transform;	//	座標系直接座標などにアクセスできないのでpublicで
@@ -54,6 +57,9 @@ public:
 	void SetTag(const std::string& tag) { tag_ = tag; }
 	const std::string& GetTag()const { return tag_; }
 
+	//	layer
+	void SortLayer();
+
 };
 
 template<typename T, typename ...Args>
@@ -66,6 +72,13 @@ inline std::shared_ptr<T> GameObject::AddComponent(Args&&... args){
 	comp->SetGameObj(shared_from_this());
 	//	T型と同じキーの型の中身に入れる。(すでにあればリセットされる)
 	components_[std::type_index(typeid (T))] = comp;
+
+	//	描画系のコンポーネントなら
+	if (auto drawable = std::dynamic_pointer_cast<DrawableComp>(comp)) {
+		drawableComps_.push_back(drawable);
+	}
+
+
 	//	作ったcomponentを一応返す
 	return comp;
 }

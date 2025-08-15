@@ -148,7 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="program\Angle.h" />
     <ClInclude Include="program\Anim2D.h" />
     <ClInclude Include="program\Camera.h" />
     <ClInclude Include="program\Circle.h" />
@@ -162,10 +161,12 @@
     <ClInclude Include="program\dive wire.h" />
     <ClInclude Include="program\DiveWireController.h" />
     <ClInclude Include="program\DrawableComp.h" />
+    <ClInclude Include="program\PlayerRender.h" />
     <ClInclude Include="program\flag.h" />
     <ClInclude Include="program\GameManager.h" />
     <ClInclude Include="program\GameObject.h" />
     <ClInclude Include="program\GameObjectMgr.h" />
+    <ClInclude Include="program\GameObjectTag.h" />
     <ClInclude Include="program\GetColor.h" />
     <ClInclude Include="program\hp.h" />
     <ClInclude Include="program\input.h" />
@@ -198,6 +199,7 @@
     <ClInclude Include="program\sword.h" />
     <ClInclude Include="program\SwordController.h" />
     <ClInclude Include="program\SystemConfig.h" />
+    <ClInclude Include="program\tag.h" />
     <ClInclude Include="program\TestPlayer.h" />
     <ClInclude Include="program\TextureResource.h" />
     <ClInclude Include="program\TextureResourceMng.h" />
@@ -226,6 +228,7 @@
     <ClCompile Include="program\MapResHandle.cpp" />
     <ClCompile Include="program\moveSystem.cpp" />
     <ClCompile Include="program\Player.cpp" />
+    <ClCompile Include="program\PlayerRender.cpp" />
     <ClCompile Include="program\PlayerStateController.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Sound.cpp" />

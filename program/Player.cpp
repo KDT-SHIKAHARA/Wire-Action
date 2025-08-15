@@ -9,6 +9,7 @@
 #include "DiveWireController.h"
 #include "dive wire.h"
 #include "Camera.h"
+#include"PlayerRender.h"
 
 /// <summary>
 /// 初期化
@@ -27,7 +28,7 @@ void Player::SetComponent()
 	auto rigid = AddComponent<RigidbodyComp>();	//	物理
 	auto collider = AddComponent<ColliderComp>(Vector2D<float>{ 50, 70 });
 	AddComponent<InputMove>();		//	入力移動
-	AddComponent<PlayerStateComp>(5);
+	auto state = AddComponent<PlayerStateComp>(5);
 	auto stateCo = AddComponent<StateController>();
 	stateCo->Start();
 	AddComponent<JumpComp>();	//	ジャンプ処理
@@ -35,6 +36,9 @@ void Player::SetComponent()
 	diveWire->Initialize(collider->size());
 	auto diveWirecontro = AddComponent<DiveWireController>();
 	diveWirecontro->Initialize(diveWire);
+	auto anim = AddComponent<PlayerAnim>();
+	anim->Initialize(state);
+	SortLayer();	//	layerのソート
 }
 
 /// <summary>

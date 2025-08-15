@@ -40,14 +40,15 @@ void Anim2D::stepFrame()
 /// <param name="path"></param>
 /// <param name="num_frames"></param>
 /// <param name="duration"></param>
-void Anim2D::LoadFrames(const std::string& path, int num_frames, int duration)
+void Anim2D::LoadFrames(const std::string& path, int num_frames, float duration)
 {
 	for (int i = 0; i < num_frames; i++) {
-		std::string path = path + std::to_string(i) + ".png";
-		auto texture = TextureResourceMgr::Instance().GetTexture(path);
+		std::string filepath = path + std::to_string(i) + ".png";
+		auto texture = TextureResourceMgr::Instance().GetTexture(filepath);
 		assert(texture->GetHandle() != -1);
 		frames_.push_back(texture);
 	}
+	duration_ms_ = duration;
 	current_ = 0;
 	elapsed_ms_ = 0.0;
 	isPlaying_ = true;

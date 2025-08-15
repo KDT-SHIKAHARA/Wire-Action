@@ -30,7 +30,7 @@ public:
 	};
 
 	//-----ÉçÅ[Éhån-----
-	void LoadFrames(const std::string& path, int num_frames, int duration);
+	void LoadFrames(const std::string& path, int num_frames, float duration = 0.2f);
 
 	//-----------------
 	//	çƒê∂êßå‰
@@ -38,7 +38,7 @@ public:
 	void Pause() { isPlaying_ = false; }
 	void Stop() { isPlaying_ = false;  current_ = 0; }
 	void SetPlayMode(PlayMode mode) { mode_ = mode; }
-	void SetDrawScale(float scale) { draw_scale_ = scale; }
+	void SetDrawScale(float scale);
 	void SetRotation(float rad) { rotation_rad_ = rad; }
 
 	void Update();

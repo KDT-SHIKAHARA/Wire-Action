@@ -170,6 +170,15 @@
     <Filter Include="system\animation">
       <UniqueIdentifier>{17c842f2-0f02-4e26-a827-a646686fb41d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Player\DrawMgr">
+      <UniqueIdentifier>{02246330-3737-4ba2-af48-968730de6715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\entity tag">
+      <UniqueIdentifier>{574cd4ee-f840-46a6-99d9-5fab865e1117}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\ECS\GameObject\tag">
+      <UniqueIdentifier>{a57872de-0292-4653-ac7e-f3b00d59e706}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -337,11 +346,17 @@
     <ClInclude Include="program\SwordController.h">
       <Filter>Game\GameObjects\Player\sword</Filter>
     </ClInclude>
-    <ClInclude Include="program\Angle.h">
-      <Filter>Game\GameObjects\Player</Filter>
-    </ClInclude>
     <ClInclude Include="program\Anim2D.h">
       <Filter>system\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="program\PlayerRender.h">
+      <Filter>Game\GameObjects\Player\DrawMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="program\GameObjectTag.h">
+      <Filter>Game\GameObjects\entity tag</Filter>
+    </ClInclude>
+    <ClInclude Include="program\tag.h">
+      <Filter>system\ECS\GameObject\tag</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -422,6 +437,9 @@
     </ClCompile>
     <ClCompile Include="program\Anim2D.cpp">
       <Filter>system\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="program\PlayerRender.cpp">
+      <Filter>Game\GameObjects\Player\DrawMgr</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
