@@ -40,7 +40,7 @@ void Anim2D::stepFrame()
 /// <param name="path"></param>
 /// <param name="num_frames"></param>
 /// <param name="duration"></param>
-void Anim2D::LoadFrames(const std::string& path, int num_frames, float duration)
+void Anim2D::LoadFrames(const std::string& path, int num_frames, float duration, float exRate, PlayMode playMode)
 {
 	for (int i = 0; i < num_frames; i++) {
 		std::string filepath = path + std::to_string(i) + ".png";
@@ -52,6 +52,9 @@ void Anim2D::LoadFrames(const std::string& path, int num_frames, float duration)
 	current_ = 0;
 	elapsed_ms_ = 0.0;
 	isPlaying_ = true;
+	draw_scale_ = exRate;
+	mode_ = playMode;
+
 }
 
 
@@ -69,6 +72,7 @@ void Anim2D::SetDrawScale(float scale)
 void Anim2D::Update() {
 	if (!isPlaying_ || frames_.empty()) return;
 
+
 	elapsed_ms_ += Time::deltaTime();
 	//	越していたらその分フレームを進める
 	//	フレーム割れをしたときように越している分全て進める
@@ -77,6 +81,7 @@ void Anim2D::Update() {
 		stepFrame();//	フレームを進める
 		if (!isPlaying_) break;	//	経過時間の関係で次まで行ってしまったときに終了できるように
 	}
+
 }
 
 void Anim2D::Render(float x, float y)

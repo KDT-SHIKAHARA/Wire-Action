@@ -1,15 +1,13 @@
 #pragma once
 #include<unordered_map>
-#include<string>
-#include<memory>
 
 #include"Anim2D.h"
-#include"Component.h"
 #include"DrawableComp.h"
+#include"RigidbodyComp.h"
+#include"PlayerState.h"
 
 
-class PlayerStateComp;
-
+class InputMove;
 /// <summary>
 /// PlayerStateCompの内部数値を見て
 /// </summary>
@@ -17,8 +15,9 @@ class PlayerAnim : public Component, public DrawableComp {
 
 	enum class AnimType {
 		Idle,
-		Jump,
 		Run,
+		Jump_up,
+		Jump_fall,
 		Wire,
 		Attack,
 		Extra,
@@ -26,9 +25,24 @@ class PlayerAnim : public Component, public DrawableComp {
 		Dead,
 	};
 
+	//	落ちているか判定
+	bool checkFall(const std::shared_ptr<RigidbodyComp>& rigid_ptr) {
+		if (!rigid_ptr->isGrounded_)fallFrame++;
+		else fallFrame = 0;
+		return fallFrame > 10;
+	}
+
+	//	落ちるアニメーションを行う状態か
+	bool checkFallAnimType() {
+		return now_type_ == AnimType::Idle
+			|| now_type_ == AnimType::Run;
+			
+	}
+
 public:
-	void Initialize(std::shared_ptr<PlayerStateComp> state) {
+	void Initialize(std::shared_ptr<PlayerStateComp> state, std::shared_ptr<InputMove> input) {
 		state_ = state;
+		input_ = input;
 	}
 
 	PlayerAnim();
@@ -38,7 +52,9 @@ public:
 	void Render()override;
 
 private:
+	std::shared_ptr<InputMove> input_;
 	std::shared_ptr<PlayerStateComp> state_;
 	std::unordered_map<AnimType, Anim2D> animations_;
 	AnimType now_type_ = AnimType::Idle;
+	int fallFrame = 0;
 };

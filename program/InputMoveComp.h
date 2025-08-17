@@ -12,7 +12,8 @@ public:
 	//	true: 入力可能 false: 入力不可
 	Flag isInput = true;
 
-	//	角度のタイプのアクセサ
+	//	反転フラグ
+	Flag isReverse = false;
 
 private:
 

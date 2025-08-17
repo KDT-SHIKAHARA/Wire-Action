@@ -16,7 +16,6 @@ void JumpComp::Update(){
 	if (!state || !rigid) return;
 	if (!state->CanJump()) return;
 
-
 	//	ƒWƒƒƒ“ƒv“ü—Í
 	if (Input::IsKeyOn(KEY_INPUT_SPACE)) {
 		rigid->SetVelocity({ rigid->velocity().x,jump_velocity_});

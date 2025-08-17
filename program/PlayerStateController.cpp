@@ -18,7 +18,7 @@ void StateController::Start()
 /// <summary>
 /// 各コンポーネントの終了状態を終了判定メソッドを見て状態の終了を管理する
 /// </summary>
-void StateController::Update(){	
+void StateController::Update() {
 	if (!state_)return;
 	auto state = state_->GetState();
 	//	状態の終了判定
@@ -38,12 +38,12 @@ void StateController::Update(){
 	}
 
 	case _P_STATE::Jump: {
-		auto& isGround = GetGameObj()->GetComponent<RigidbodyComp>()->isGrounded_;
+		const auto& Rigid = GetGameObj()->GetComponent<RigidbodyComp>();
 
 		//	着地していたら待機状態にする
-		if (isGround) {
+		if (Rigid->isGrounded_ && Rigid->velocity().y <= 0.0f) {
 			state_->SetState(_P_STATE::Idle);
- 		}
+		}
 		break;
 
 	}

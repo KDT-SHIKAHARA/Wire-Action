@@ -67,3 +67,19 @@ void Camera::Update() {
 
 	ClampPosToMap();
 }
+
+/// <summary>
+///	ƒJƒƒ‰À•W‚ğl—¶‚µ‚Ä‰æ‘œ‚ğ•`‰æ‚·‚é
+/// </summary>
+/// <param name="pos"></param>
+/// <param name="exRate"></param>
+/// <param name="angle"></param>
+/// <param name="GrHandle"></param>
+/// <param name="TransFlag"></param>
+/// <param name="ReverseFlagX"></param>
+/// <param name="ReverseFlagY"></param>
+void DrawRotaGraphCam(const Vector2D<float>& pos, float exRate, float angle, int GrHandle, int TransFlag, int ReverseFlagX, int ReverseFlagY)
+{
+	auto draw = pos - Camera::Instance().position() + (Camera::Instance().area_size() / 2);
+	DrawRotaGraphF(draw.x, draw.y, exRate, angle, GrHandle, TransFlag, ReverseFlagX, ReverseFlagY);
+}

@@ -15,6 +15,6 @@ public:
 
 private:
 	const float jump_velocity_ = -300.0f;
-
+	Flag canJump = true;
 
 };

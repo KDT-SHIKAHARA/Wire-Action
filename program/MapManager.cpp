@@ -149,13 +149,16 @@ bool MapManager::CheckAABB(std::shared_ptr<GameObject> gameObj)
 			//	当たり判定
 			if (next_GameObj.IsCollision(tile)) {
 				if (velocity.y > 0) {	//	下方向
+					//	当たり判定をするタイルの上側座標
 					float limit = tile.y - (current_GameObj.y + current_GameObj.h);
+					//	上側座標より下だったらめり込んでいる
 					if (limit < current_vec_y) {
 						current_vec_y = limit;
+						isGround = true;
+
 					}
-					isGround = true;
 				}
-				else if (velocity.y < 0) {	//	上方向
+				else if (velocity.y <= 0) {	//	上方向
 					float limit = (tile.y + tile.h) - current_GameObj.y;
 					if (limit > current_vec_y) {
 						current_vec_y = limit;
@@ -174,6 +177,8 @@ bool MapManager::CheckAABB(std::shared_ptr<GameObject> gameObj)
 
 	//	補正した速度をセット
 	rigid_ptr->SetVelocity(new_velocity / Time::deltaTime());
+
+
 
 	//	設置判定を反映
 	if (isGround) {

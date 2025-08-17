@@ -73,3 +73,5 @@ private:
 
 
 };
+
+void DrawRotaGraphCam(const Vector2D<float>& pos, float exRate, float angle, int GrHandle, int TransFlag, int ReverseFlagX, int ReverseFlagY);

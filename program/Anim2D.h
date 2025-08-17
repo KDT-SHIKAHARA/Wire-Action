@@ -30,7 +30,7 @@ public:
 	};
 
 	//-----ロード系-----
-	void LoadFrames(const std::string& path, int num_frames, float duration = 0.2f);
+	void LoadFrames(const std::string& path, int num_frames, float duration = 0.2f,float exRate = 1.0f, PlayMode playMode = PlayMode::Loop);
 
 	//-----------------
 	//	再生制御
@@ -43,7 +43,6 @@ public:
 
 	void Update();
 	void Render(float x,float y);
-
 private:
 	std::vector< std::shared_ptr<TextureResource>> frames_;	//	描画する画像リスト
 
@@ -56,10 +55,12 @@ private:
 	//	描画パラメーター
 	float draw_scale_ = 1.0f;	//	縮小率
 	float rotation_rad_ = 0.f;	//	表示の回転
-	Flag isFlip_ = false;		//	反転させるかどうか
 
 
 	Flag isPlaying_ = false;		//	再生フラグ
 	Flag isFinished_ = false;		//	一回きりの処理が終わったのか
+
+public:
+	Flag isFlip_ = false;		//	反転させるかどうか
 
 };

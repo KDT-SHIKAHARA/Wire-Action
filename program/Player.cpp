@@ -27,7 +27,7 @@ void Player::SetComponent()
 	transform.SetPosition(Vector2D<float>(500, 100));
 	auto rigid = AddComponent<RigidbodyComp>();	//	•¨—
 	auto collider = AddComponent<ColliderComp>(Vector2D<float>{ 50, 70 });
-	AddComponent<InputMove>();		//	“ü—ÍˆÚ“®
+	auto input = AddComponent<InputMove>();		//	“ü—ÍˆÚ“®
 	auto state = AddComponent<PlayerStateComp>(5);
 	auto stateCo = AddComponent<StateController>();
 	stateCo->Start();
@@ -37,7 +37,7 @@ void Player::SetComponent()
 	auto diveWirecontro = AddComponent<DiveWireController>();
 	diveWirecontro->Initialize(diveWire);
 	auto anim = AddComponent<PlayerAnim>();
-	anim->Initialize(state);
+	anim->Initialize(state, input);
 	SortLayer();	//	layer‚Ìƒ\[ƒg
 }
 
@@ -64,4 +64,6 @@ void Player::Render()
 	DrawBoxAA(draw.x, draw.y, draw.x + size.x, draw.y + size.y,
 		RED, TRUE);
 	GameObject::Render();
+
 }
+

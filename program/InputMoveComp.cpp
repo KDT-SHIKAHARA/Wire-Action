@@ -41,6 +41,7 @@ void InputMove::Update(){
 	if (Input::IsKeyPressed(KEY_INPUT_A)) {
 		rigid_ptr->AddVelocity({ -move_speed_ ,0 });
 		GetGameObj()->transform.SetRotation(180.0f * DegToRad);
+		isReverse = true;
 		state->RequestMove();
 	}
 
@@ -48,6 +49,7 @@ void InputMove::Update(){
 	if (Input::IsKeyPressed(KEY_INPUT_D)) {
 		rigid_ptr->AddVelocity({ move_speed_ ,0 });
 		GetGameObj()->transform.SetRotation(0.0f);
+		isReverse = false;
 		state->RequestMove();
 	}
 }
