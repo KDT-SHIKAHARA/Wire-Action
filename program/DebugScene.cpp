@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "GameObjectMgr.h"
 #include "ColliderComp.h"
+#include "Boss.h"
 
 SceneDebug::SceneDebug(){
 	auto player = std::make_shared<Player>();
@@ -11,6 +12,8 @@ SceneDebug::SceneDebug(){
 	player_ = player;
 	GameObjMgr::Instance().AddGameObject(player);
 	MapManager::Instance().Load();
+	GameObjMgr::Instance().AddGameObject(Boss::GetGameObj());
+
 }
 
 void SceneDebug::Update(){

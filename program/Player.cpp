@@ -10,6 +10,9 @@
 #include "dive wire.h"
 #include "Camera.h"
 #include"PlayerRender.h"
+#include"sword.h"
+#include"ui_health.h"
+#include"health.h"
 
 /// <summary>
 /// èâä˙âª
@@ -38,6 +41,10 @@ void Player::SetComponent()
 	diveWirecontro->Initialize(diveWire);
 	auto anim = AddComponent<PlayerAnim>();
 	anim->Initialize(state, input);
+	auto health = AddComponent<Healsh>(4);
+	auto ui_health = AddComponent<UiPlayerHp>();
+	ui_health->Set(health);
+	AddComponent<Sword>();
 	SortLayer();	//	layerÇÃÉ\Å[Ég
 }
 

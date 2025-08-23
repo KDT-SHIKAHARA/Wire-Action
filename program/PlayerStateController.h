@@ -73,6 +73,16 @@ public:
 			state == _P_STATE::Jump;
 	}
 
+	bool CanInput()const {
+		auto state = state_->GetState();
+		return 
+			state == _P_STATE::Idle ||
+			state == _P_STATE::Move ||
+			state == _P_STATE::Jump || 
+			state == _P_STATE::Attack;
+
+	}
+
 	//	ダイブワイヤー
 	bool CanDiveWire()const {
 		auto state = state_->GetState();

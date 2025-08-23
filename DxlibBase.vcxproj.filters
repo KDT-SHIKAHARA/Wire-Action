@@ -179,6 +179,30 @@
     <Filter Include="system\ECS\GameObject\tag">
       <UniqueIdentifier>{a57872de-0292-4653-ac7e-f3b00d59e706}</UniqueIdentifier>
     </Filter>
+    <Filter Include="system\Hit">
+      <UniqueIdentifier>{90ac5643-5d31-490d-8497-9da898cf70e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\status">
+      <UniqueIdentifier>{824a692a-9333-4213-a091-a967b8f9de77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Player\UI">
+      <UniqueIdentifier>{9a5937ff-1db3-47a9-bfd1-69ada5d72908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss">
+      <UniqueIdentifier>{1795d0a8-3c9d-4d42-a62d-8f3ba8a48a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss\state">
+      <UniqueIdentifier>{a4085a04-32a9-4546-8b01-b1e6218de0db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss\Render">
+      <UniqueIdentifier>{0fb44008-448b-42b5-9a68-a7994f091dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss\Laser">
+      <UniqueIdentifier>{bdc2f1e3-dfde-4bc7-a7f1-389433ba94fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss\Sickle">
+      <UniqueIdentifier>{1983548c-2199-4694-8278-05fe800740d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -343,9 +367,6 @@
     <ClInclude Include="program\Circle.h">
       <Filter>system\Math2D</Filter>
     </ClInclude>
-    <ClInclude Include="program\SwordController.h">
-      <Filter>Game\GameObjects\Player\sword</Filter>
-    </ClInclude>
     <ClInclude Include="program\Anim2D.h">
       <Filter>system\animation</Filter>
     </ClInclude>
@@ -357,6 +378,39 @@
     </ClInclude>
     <ClInclude Include="program\tag.h">
       <Filter>system\ECS\GameObject\tag</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Hit.h">
+      <Filter>system\Hit</Filter>
+    </ClInclude>
+    <ClInclude Include="program\health.h">
+      <Filter>Game\GameObjects\status</Filter>
+    </ClInclude>
+    <ClInclude Include="program\PlayerUi.h">
+      <Filter>Game\GameObjects\Player\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="program\ui_health.h">
+      <Filter>Game\GameObjects\Player\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BossState.h">
+      <Filter>Game\GameObjects\Enemy\Boss\state</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BossStateController.h">
+      <Filter>Game\GameObjects\Enemy\Boss\state</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Boss.h">
+      <Filter>Game\GameObjects\Enemy\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BossRender.h">
+      <Filter>Game\GameObjects\Enemy\Boss\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="program\SwordController.h">
+      <Filter>Game\GameObjects\Player\sword</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BossLaser.h">
+      <Filter>Game\GameObjects\Enemy\Boss\Laser</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Scythe.h">
+      <Filter>Game\GameObjects\Enemy\Boss\Sickle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -440,6 +494,23 @@
     </ClCompile>
     <ClCompile Include="program\PlayerRender.cpp">
       <Filter>Game\GameObjects\Player\DrawMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Hit.cpp" />
+    <ClCompile Include="program\PlayerUi.cpp" />
+    <ClCompile Include="program\ui_health.cpp">
+      <Filter>Game\GameObjects\Player\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Boss.cpp">
+      <Filter>Game\GameObjects\Enemy\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="program\BossStateController.cpp">
+      <Filter>Game\GameObjects\Enemy\Boss\state</Filter>
+    </ClCompile>
+    <ClCompile Include="program\BossRender.cpp">
+      <Filter>Game\GameObjects\Enemy\Boss\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="program\BossLaser.cpp">
+      <Filter>Game\GameObjects\Enemy\Boss\Laser</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

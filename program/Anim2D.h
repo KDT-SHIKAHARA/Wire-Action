@@ -40,6 +40,12 @@ public:
 	void SetPlayMode(PlayMode mode) { mode_ = mode; }
 	void SetDrawScale(float scale);
 	void SetRotation(float rad) { rotation_rad_ = rad; }
+	void Reset() {
+		current_ = 0;
+		elapsed_ms_ = 0;
+		isFinished_ = false;
+ 		isPlaying_ = true;
+	}
 
 	void Update();
 	void Render(float x,float y);

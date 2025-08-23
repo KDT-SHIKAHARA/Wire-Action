@@ -6,7 +6,8 @@
 class MapLoader {
 	enum TileType{
 		None,
-		Wall,
+		Grass,
+		Platform,
 		Max,
 	};
 

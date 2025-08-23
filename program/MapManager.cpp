@@ -202,9 +202,9 @@ void MapManager::Load() {
 	//	ファイルパスを読み込む
 	try
 	{
-		registry_.LoadFilesPath(handle_path_);
+		//registry_.LoadFilesPath(handle_path_);
 		render_.LoadTexture(registry_.tiles_file_path());
-		mapData_.LoadMapData(map_data_path_);
+		mapData_.LoadMapData(boss_map_data_);
 
 	}
 	catch (const std::exception&)

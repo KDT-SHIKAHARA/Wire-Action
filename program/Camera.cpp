@@ -58,6 +58,10 @@ void Camera::Update() {
 		//position_ = { position_.x,(float)WINDOW_H / 2 + 100 };
 		break;
 	case CameraMode::Fixed: 
+		DebugLog::Log("camera_x:", position_.x, 0, 80);
+		DebugLog::Log("camera_y:", position_.y, 0, 100);
+		position_ = { (float)WINDOW_W / 2 , (float)WINDOW_H / 2 };
+
 		break;
 	case CameraMode::Script:
 		break;

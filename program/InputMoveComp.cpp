@@ -21,7 +21,7 @@ void InputMove::Update(){
 	if (!rigid_ptr || !state) return;
 
 	//	é¿çsïsâ¬Ç»ÇÁèàóùÇèIóπ
-	if (!state->CanMove()) return;
+	if (!state->CanInput()) return;
 
 	////	è„
 	//if (Input::IsKeyPressed(KEY_INPUT_W)) {

@@ -149,6 +149,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="program\Anim2D.h" />
+    <ClInclude Include="program\Boss.h" />
+    <ClInclude Include="program\BossLaser.h" />
+    <ClInclude Include="program\BossRender.h" />
+    <ClInclude Include="program\BossState.h" />
+    <ClInclude Include="program\BossStateController.h" />
     <ClInclude Include="program\Camera.h" />
     <ClInclude Include="program\Circle.h" />
     <ClInclude Include="program\ColliderComp.h" />
@@ -161,6 +166,8 @@
     <ClInclude Include="program\dive wire.h" />
     <ClInclude Include="program\DiveWireController.h" />
     <ClInclude Include="program\DrawableComp.h" />
+    <ClInclude Include="program\health.h" />
+    <ClInclude Include="program\Hit.h" />
     <ClInclude Include="program\PlayerRender.h" />
     <ClInclude Include="program\flag.h" />
     <ClInclude Include="program\GameManager.h" />
@@ -181,6 +188,7 @@
     <ClInclude Include="program\Player.h" />
     <ClInclude Include="program\PlayerState.h" />
     <ClInclude Include="program\PlayerStateController.h" />
+    <ClInclude Include="program\PlayerUi.h" />
     <ClInclude Include="program\Rect.h" />
     <ClInclude Include="program\RigidbodyComp.h" />
     <ClInclude Include="program\power.h" />
@@ -188,6 +196,7 @@
     <ClInclude Include="program\RemFPS.h" />
     <ClInclude Include="program\SaveData.h" />
     <ClInclude Include="program\sceneBase.h" />
+    <ClInclude Include="program\Scythe.h" />
     <ClInclude Include="program\singleton.h" />
     <ClInclude Include="program\Sound.h" />
     <ClInclude Include="program\SoundPathTable .h" />
@@ -206,11 +215,16 @@
     <ClInclude Include="program\Tile.h" />
     <ClInclude Include="program\Time.h" />
     <ClInclude Include="program\transform.h" />
+    <ClInclude Include="program\ui_health.h" />
     <ClInclude Include="program\vector2d.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="library\tinyxml12\tinyxml2.cpp" />
     <ClCompile Include="program\Anim2D.cpp" />
+    <ClCompile Include="program\Boss.cpp" />
+    <ClCompile Include="program\BossLaser.cpp" />
+    <ClCompile Include="program\BossRender.cpp" />
+    <ClCompile Include="program\BossStateController.cpp" />
     <ClCompile Include="program\Camera.cpp" />
     <ClCompile Include="program\Color.cpp" />
     <ClCompile Include="program\DebugScene.cpp" />
@@ -218,6 +232,7 @@
     <ClCompile Include="program\DiveWireController.cpp" />
     <ClCompile Include="program\GameManager.cpp" />
     <ClCompile Include="program\GameObject.cpp" />
+    <ClCompile Include="program\Hit.cpp" />
     <ClCompile Include="program\input.cpp" />
     <ClCompile Include="program\InputMoveComp.cpp" />
     <ClCompile Include="program\JumpComp.cpp" />
@@ -230,12 +245,14 @@
     <ClCompile Include="program\Player.cpp" />
     <ClCompile Include="program\PlayerRender.cpp" />
     <ClCompile Include="program\PlayerStateController.cpp" />
+    <ClCompile Include="program\PlayerUi.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />
     <ClCompile Include="program\sword.cpp" />
     <ClCompile Include="program\TestPlayer.cpp" />
     <ClCompile Include="program\transform.cpp" />
+    <ClCompile Include="program\ui_health.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

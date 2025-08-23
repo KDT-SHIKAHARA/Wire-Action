@@ -3,21 +3,15 @@
 #include"DrawableComp.h"
 #include<vector>
 #include"Circle.h"
-
+#include"vector2d.h"
 
 class Sword : public Component ,public DrawableComp{
-
-	//	UŒ‚”»’è‚Ì—LŒø‰»
-	void StartAttack();
 
 	//	“G‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ä“–‚½‚è”»’è‚ğ‚·‚é
 	void CheckEnemyHit();
 
-	//	“–‚½‚è”»’è‚ğ‚·‚éÀ•W‚ğŒvZ‚·‚é
-	void CaluCircle();
 
 public:
-	Sword();
 
 	//	‰Šúİ’è
 	void Start();
@@ -26,15 +20,15 @@ public:
 	void Update()override;
 	void Render()override;
 
+	//	I—¹ƒƒ\ƒbƒh
+	bool isFinish() {
+		return attackFrame_ >= kAttackFrame_max_;
+	};
+
 private:
-	std::vector<Circle> collistionCircles_;	//	“–‚½‚è”»’è‚ğ‚·‚é‰~
-	double attackFrame = 0;
-	float radius_ = 10;	//	‰~‚Ì”¼Œa (‚¢‚¢Š´‚¶‚É)
-	float length_ = 50;	//	Œ•’·‚³   (‚¢‚¢Š´‚¶‚É)
-	float angle_;	//	‰~‚ÌŠp“x
-	float angleMax_;	//	‰~‚ÌŠp“xÅ‘å
-	float angleIncrement_;	//	Šp“x‚Ì‘‰Á—Ê
-	int numCircle_ = 5;	//	‰~‚Ì”
-
-
+	Vector2D<float> gameObj_pos_;
+	const double kAttackFrame_max_ = 1.;
+	double attackFrame_ = kAttackFrame_max_;
+	float radius_ = 50;	//	‰~‚Ì”¼Œa (‚¢‚¢Š´‚¶‚É)
+	int	attack_point_ = 5;
 };

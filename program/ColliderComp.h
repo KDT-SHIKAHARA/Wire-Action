@@ -8,7 +8,7 @@
 class ColliderComp : public Component{
 	Vector2D<float> size_;
 public:
-	ColliderComp(Vector2D<float> arg_size = { 0,0 })
+	ColliderComp(Vector2D<float> arg_size = { 10,10 })
 		:size_(arg_size){ }
 
 	Vector2D<float> size() const { return size_; }

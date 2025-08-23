@@ -2,7 +2,7 @@
 #include"TextureResourceMng.h"
 #include"dxlib.h"
 #include"GetColor.h"
-
+#include<cassert>
 /// <summary>
 /// ファイルパス管理からファイルパスを取得して、テクスチャを読み込んでいる
 /// </summary>
@@ -10,6 +10,7 @@
 void MapRender::LoadTexture(const std::unordered_map<int, std::string>& tiles_file_path){
 	for (auto& [num, filepath] : tiles_file_path) {
 		tile_textures_[num] = TextureResourceMgr::Instance().GetTexture(filepath);
+		assert(tile_textures_[num]->GetHandle() != -1);
 	}
 }
 
@@ -38,6 +39,10 @@ void MapRender::Render(const MapData& mapData) {
 	//	必要箇所のみ描画
 	for (int y = top; y <= bottom; y++) {
 		for (int x = left; x <= right; x++) {
+
+			if (x < 0 || y < 0 || x >= mapData.GetMapW() || y >= mapData.GetMapH()) {
+				continue;
+			}
 			//	マップタイルの取得
 			const Tile& tile = mapData.GetTile(x, y);
 
@@ -53,9 +58,6 @@ void MapRender::Render(const MapData& mapData) {
 			int drawX = static_cast<int>(x * map_size - camera_pos.x + camera_size.x / 2);
 			int drawY = static_cast<int>(y * map_size - camera_pos.y + camera_size.y / 2);
 			//	描画
-			if (tile.id > 1) {
-				int a = 0;
-			}
 
 
 			DrawBox(drawX, drawY, drawX + map_size, drawY + map_size, BLUE, TRUE);

@@ -4,6 +4,7 @@
 #include"InputMoveComp.h"
 #include"DebugLog.h"
 #include "dive wire.h"
+#include "sword.h"
 
 /// <summary>
 /// stateコンポーネントの取得
@@ -19,7 +20,8 @@ void StateController::Start()
 /// 各コンポーネントの終了状態を終了判定メソッドを見て状態の終了を管理する
 /// </summary>
 void StateController::Update() {
-	if (!state_)return;
+	const auto& Rigid = GetGameObj()->GetComponent<RigidbodyComp>();
+	if (!state_ || !Rigid)return;
 	auto state = state_->GetState();
 	//	状態の終了判定
 	//	終了したら待機状態に戻す
@@ -38,8 +40,6 @@ void StateController::Update() {
 	}
 
 	case _P_STATE::Jump: {
-		const auto& Rigid = GetGameObj()->GetComponent<RigidbodyComp>();
-
 		//	着地していたら待機状態にする
 		if (Rigid->isGrounded_ && Rigid->velocity().y <= 0.0f) {
 			state_->SetState(_P_STATE::Idle);
@@ -49,19 +49,27 @@ void StateController::Update() {
 	}
 
 	case _P_STATE::dive:
+	{
 		const auto& dive_wire = GetGameObj()->GetComponent<DiveWire>();
-		auto rigid = GetGameObj()->GetComponent<RigidbodyComp>();
 		if (!dive_wire)return;
-		if (!rigid) return;
 		if (dive_wire->IsFinished()) {
 			state_->SetState(_P_STATE::Idle);
-			rigid->isStatic_.Set(false);
+			Rigid->isStatic_.Set(false);
 			dive_wire->ReSet();
 		}
+	}
 		break;
 
+	case _P_STATE::Attack:
+	{
+		const auto& sword = GetGameObj()->GetComponent<Sword>();
+		if (!sword) return;
+		if (sword->isFinish()) {
+			state_->SetState(_P_STATE::Idle);
+		}
 
-
+	}
+		break;
 	}
 
 }

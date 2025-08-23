@@ -20,7 +20,7 @@ public:
 	//	コンポーネント追加
 	void SetComponent();
 
-	//	更新、描画
+	//	更新、描画71
 	void Update()override;
 	void Render()override;
 

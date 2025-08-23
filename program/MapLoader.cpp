@@ -3,6 +3,7 @@
 #include<sstream>
 #include<unordered_set>
 #include<stdexcept>
+#include<cassert>
 
 /// <summary>
 /// 文字列を「，」の前で区切ってTileクラスに格納する。
@@ -17,6 +18,8 @@ std::vector<Tile> MapLoader::split(const std::string& str, char delimiter) {
 
 	while (std::getline(tmp_csvLine,tmp_strBuf,delimiter)){
 		int tmp_map_num = std::stoi(tmp_strBuf);
+		//	バグってた箇所はここ
+		assert(tmp_map_num < TileType::Max);
 		if (tmp_map_num >= TileType::Max) throw std::out_of_range("MapLoader::split: 読み込んだマップ番号が最大値を越しています");
 		tmp_row.push_back(
 			{ tmp_map_num,TileShape::Rect, CheckCollisionFlag(tmp_map_num) });

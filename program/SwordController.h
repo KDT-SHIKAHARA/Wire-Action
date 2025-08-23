@@ -16,7 +16,7 @@ class SwordController : public ColliderComp {
 		//	“ü—Í‚ðs‚¦‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é
 		if (!stateCom->CanAttack()) return;
 		//	“ü—Í”»’è
-		if (Input::IsMouseOn(MOUSE_INPUT_RIGHT)) {
+		if (Input::IsMouseOn(MOUSE_INPUT_LEFT)) {
 			auto sword = GetGameObj()->GetComponent<Sword>();
 			if (!sword) return;
 
