@@ -41,7 +41,7 @@ void Player::SetComponent()
 	diveWirecontro->Initialize(diveWire);
 	auto anim = AddComponent<PlayerAnim>();
 	anim->Initialize(state, input);
-	auto health = AddComponent<Healsh>(4);
+	auto health = AddComponent<Health>(4);
 	auto ui_health = AddComponent<UiPlayerHp>();
 	ui_health->Set(health);
 	AddComponent<Sword>();

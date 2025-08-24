@@ -5,7 +5,7 @@
 #include"SystemConfig.h"
 
 
-class Healsh;
+class Health;
 class UiPlayerHp : public Component, public DrawableComp {
 
 	void Box(int num);
@@ -17,7 +17,7 @@ public:
 
 	//	必要な情報セット
 	//	実行順が大切なのでコンストラクタにはしません。（大事）
-	void Set(std::shared_ptr<Healsh> healsh) {
+	void Set(std::shared_ptr<Health> healsh) {
 		healsh_ = healsh;
 	}
 
@@ -25,7 +25,7 @@ public:
 	void Render()override;
 
 private:
-	std::shared_ptr<Healsh> healsh_;	//	体力クラスのポインタ
+	std::shared_ptr<Health> healsh_;	//	体力クラスのポインタ
 	int hp_ = 0;
 
 	//	定数

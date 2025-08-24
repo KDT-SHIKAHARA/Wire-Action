@@ -170,6 +170,7 @@
     <ClInclude Include="program\DrawableComp.h" />
     <ClInclude Include="program\health.h" />
     <ClInclude Include="program\Hit.h" />
+    <ClInclude Include="program\HitBOxRenderComp.h" />
     <ClInclude Include="program\Particle .h" />
     <ClInclude Include="program\PlayerRender.h" />
     <ClInclude Include="program\flag.h" />
@@ -207,6 +208,8 @@
     <ClInclude Include="program\SoundResourceMng.h" />
     <ClInclude Include="program\SoundManager.h" />
     <ClInclude Include="program\SoundType.h" />
+    <ClInclude Include="program\StandingBot.h" />
+    <ClInclude Include="program\StandingBotRender.h" />
     <ClInclude Include="program\StatusAlias.h" />
     <ClInclude Include="program\sword.h" />
     <ClInclude Include="program\SwordController.h" />
@@ -240,6 +243,7 @@
     <ClCompile Include="program\GameManager.cpp" />
     <ClCompile Include="program\GameObject.cpp" />
     <ClCompile Include="program\Hit.cpp" />
+    <ClCompile Include="program\HitBOxRenderComp.cpp" />
     <ClCompile Include="program\input.cpp" />
     <ClCompile Include="program\InputMoveComp.cpp" />
     <ClCompile Include="program\JumpComp.cpp" />
@@ -258,6 +262,8 @@
     <ClCompile Include="program\Scythe.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />
+    <ClCompile Include="program\StandingBot.cpp" />
+    <ClCompile Include="program\StandingBotRender.cpp" />
     <ClCompile Include="program\sword.cpp" />
     <ClCompile Include="program\TestPlayer.cpp" />
     <ClCompile Include="program\Title.cpp" />

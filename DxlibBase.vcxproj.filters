@@ -221,6 +221,15 @@
     <Filter Include="system\scene\BossStage">
       <UniqueIdentifier>{99f56a0d-e1ab-4cf7-b991-1f887d238f6c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Enemy\StandBot">
+      <UniqueIdentifier>{c731d172-4fca-4b36-b9fb-750c0f29fae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\StandBot\Render">
+      <UniqueIdentifier>{9d2f4fcc-4e68-4050-a1ec-e3f4bd7ec20b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\component\BoxRender">
+      <UniqueIdentifier>{ed081e9f-b27c-41f4-a942-e3f576fb6ff0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -448,6 +457,15 @@
     <ClInclude Include="program\BossScene.h">
       <Filter>system\scene\BossStage</Filter>
     </ClInclude>
+    <ClInclude Include="program\StandingBot.h">
+      <Filter>Game\GameObjects\Enemy\StandBot</Filter>
+    </ClInclude>
+    <ClInclude Include="program\StandingBotRender.h">
+      <Filter>Game\GameObjects\Enemy\StandBot\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="program\HitBOxRenderComp.h">
+      <Filter>Game\GameObjects\component\BoxRender</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -559,9 +577,20 @@
     <ClCompile Include="program\TutorialScene.cpp">
       <Filter>system\scene\tutorial</Filter>
     </ClCompile>
-    <ClCompile Include="program\BossScene.cpp" />
     <ClCompile Include="program\Hit.cpp">
       <Filter>system\Hit</Filter>
+    </ClCompile>
+    <ClCompile Include="program\BossScene.cpp">
+      <Filter>system\scene\BossStage</Filter>
+    </ClCompile>
+    <ClCompile Include="program\StandingBot.cpp">
+      <Filter>Game\GameObjects\Enemy\StandBot</Filter>
+    </ClCompile>
+    <ClCompile Include="program\StandingBotRender.cpp">
+      <Filter>Game\GameObjects\Enemy\StandBot\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="program\HitBOxRenderComp.cpp">
+      <Filter>Game\GameObjects\component\BoxRender</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

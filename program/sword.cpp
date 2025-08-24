@@ -33,7 +33,7 @@ void Sword::CheckEnemyHit()
 			gameObj_pos_, radius_)) {
 
 			//	体力コンポーネントを作って、生存の管理コンポーネントを作成。
-			auto healsh = enemy->GetComponent<Healsh>();
+			auto healsh = enemy->GetComponent<Health>();
 			if (!healsh) return;
 			healsh->Damage(attack_point_);
 		}

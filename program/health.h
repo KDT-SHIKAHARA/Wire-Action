@@ -5,7 +5,7 @@
 #include "flag.h"
 #include "Time.h"
 
-class Healsh : public Component {
+class Health : public Component {
 
 	//	ãŒÀ‰ºŒÀ
 	void clamp() { current_ = std::clamp(current_, 0, max_); }
@@ -13,7 +13,7 @@ class Healsh : public Component {
 public:
 	
 	//	‰Šú‰»
-	Healsh(int max = 10,double invi_max = 1.0) : max_(max), current_(max) {
+	Health(int max = 10,double invi_max = 1.0) : max_(max), current_(max) {
 		assert(max > 0);
 		if (invi_max < 0) invi_max = 0;
 		invi_max_ = invi_max;
