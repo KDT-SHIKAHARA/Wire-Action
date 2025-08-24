@@ -7,6 +7,9 @@
 
 //	2025.5.2
 
+
+#define _TEX_RES_MGR(file_path) TextureResourceMgr::Instance().GetTexture(file_path)
+
 /// <summary>
 /// ‰æ‘œ‚Ì“Ç‚İ‚İ‚ÆŠÇ—‚ğ‚·‚éB
 /// factory‚Ì—v‘f‚ğ‚à‚Âmanager‚Ì‚æ‚¤‚ÈŠ´‚¶‚È‚Ì‚Åstatic‚Å‚Í‚È‚¢

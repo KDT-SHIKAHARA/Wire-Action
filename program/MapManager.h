@@ -29,6 +29,8 @@ class MapManager:public Singleton<MapManager>{
 	std::string tutorial_map_data_ = "res/map/data/tutorial_map.txt";
 	std::string boss_map_data_ = "res/map/data/boss_map.txt";
 public:
+	//	そのマップ番号がダメージをGameObjが食らう番号か判定
+
 
 	//	GameObjectとの当たり判定
 	void CheckCollision(const std::vector<std::shared_ptr<GameObject>>& gameObjs);
@@ -40,7 +42,7 @@ public:
 	bool CheckAABB(std::shared_ptr<GameObject> gameObj);
 
 	//	マップデータの読込
-	void Load();
+	void Load(const std::string& map_data);
 
 	//	描画
 	void Render();

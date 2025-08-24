@@ -152,8 +152,10 @@
     <ClInclude Include="program\Boss.h" />
     <ClInclude Include="program\BossLaser.h" />
     <ClInclude Include="program\BossRender.h" />
+    <ClInclude Include="program\BossScene.h" />
     <ClInclude Include="program\BossState.h" />
     <ClInclude Include="program\BossStateController.h" />
+    <ClInclude Include="program\BoxButton.h" />
     <ClInclude Include="program\Camera.h" />
     <ClInclude Include="program\Circle.h" />
     <ClInclude Include="program\ColliderComp.h" />
@@ -168,6 +170,7 @@
     <ClInclude Include="program\DrawableComp.h" />
     <ClInclude Include="program\health.h" />
     <ClInclude Include="program\Hit.h" />
+    <ClInclude Include="program\Particle .h" />
     <ClInclude Include="program\PlayerRender.h" />
     <ClInclude Include="program\flag.h" />
     <ClInclude Include="program\GameManager.h" />
@@ -214,7 +217,10 @@
     <ClInclude Include="program\TextureResourceMng.h" />
     <ClInclude Include="program\Tile.h" />
     <ClInclude Include="program\Time.h" />
+    <ClInclude Include="program\Title.h" />
+    <ClInclude Include="program\trailbeam.h" />
     <ClInclude Include="program\transform.h" />
+    <ClInclude Include="program\TutorialScene.h" />
     <ClInclude Include="program\ui_health.h" />
     <ClInclude Include="program\vector2d.h" />
   </ItemGroup>
@@ -224,6 +230,7 @@
     <ClCompile Include="program\Boss.cpp" />
     <ClCompile Include="program\BossLaser.cpp" />
     <ClCompile Include="program\BossRender.cpp" />
+    <ClCompile Include="program\BossScene.cpp" />
     <ClCompile Include="program\BossStateController.cpp" />
     <ClCompile Include="program\Camera.cpp" />
     <ClCompile Include="program\Color.cpp" />
@@ -242,16 +249,20 @@
     <ClCompile Include="program\MapRender.cpp" />
     <ClCompile Include="program\MapResHandle.cpp" />
     <ClCompile Include="program\moveSystem.cpp" />
+    <ClCompile Include="program\Particle .cpp" />
     <ClCompile Include="program\Player.cpp" />
     <ClCompile Include="program\PlayerRender.cpp" />
     <ClCompile Include="program\PlayerStateController.cpp" />
     <ClCompile Include="program\PlayerUi.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
+    <ClCompile Include="program\Scythe.cpp" />
     <ClCompile Include="program\Sound.cpp" />
     <ClCompile Include="program\SoundManager.cpp" />
     <ClCompile Include="program\sword.cpp" />
     <ClCompile Include="program\TestPlayer.cpp" />
+    <ClCompile Include="program\Title.cpp" />
     <ClCompile Include="program\transform.cpp" />
+    <ClCompile Include="program\TutorialScene.cpp" />
     <ClCompile Include="program\ui_health.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

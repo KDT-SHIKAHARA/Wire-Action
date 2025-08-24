@@ -255,3 +255,8 @@ Vector2D<T> GetPointFromAngle(const Vector2D<T>& center,float distance,float ang
 	return { center.x + std::cos(rad) * distance,
 			 center.y + std::sin(rad) * distance };
 }
+
+
+
+//	ƒGƒŠƒAƒX
+using Vector2Df = Vector2D<float>;

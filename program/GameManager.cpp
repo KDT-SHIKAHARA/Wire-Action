@@ -9,6 +9,7 @@
 
 #include"SystemConfig.h"
 #include<cassert>
+#include "Title.h"
 
 
 
@@ -25,7 +26,7 @@ GameManager::GameManager() {
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//	インスタンス生成
-	CreateScene<STAGE>();
+	CreateScene<SCTitle>();
 
 }
 

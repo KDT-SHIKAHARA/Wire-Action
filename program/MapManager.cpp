@@ -198,13 +198,13 @@ bool MapManager::CheckAABB(std::shared_ptr<GameObject> gameObj)
 /// ファイルからファイルパスを読み込んで
 /// ファイルから画像を読み込む
 /// </summary>
-void MapManager::Load() {
+void MapManager::Load(const std::string& map_data) {
 	//	ファイルパスを読み込む
 	try
 	{
 		//registry_.LoadFilesPath(handle_path_);
 		render_.LoadTexture(registry_.tiles_file_path());
-		mapData_.LoadMapData(boss_map_data_);
+		mapData_.LoadMapData(map_data);
 
 	}
 	catch (const std::exception&)

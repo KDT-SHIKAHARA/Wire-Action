@@ -203,6 +203,24 @@
     <Filter Include="Game\GameObjects\Enemy\Boss\Sickle">
       <UniqueIdentifier>{1983548c-2199-4694-8278-05fe800740d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Enemy\Boss\trailbeam">
+      <UniqueIdentifier>{38bed87c-4119-40e7-a7b9-de0396a2d908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene\Title">
+      <UniqueIdentifier>{64d9fc9a-0721-458a-81b3-eeb4c1b751a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\effect">
+      <UniqueIdentifier>{0222e3c0-4438-4b91-a314-3efeb3ba8395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\button">
+      <UniqueIdentifier>{ec5a1ef9-55cc-4045-8d91-ec32e9fba0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene\tutorial">
+      <UniqueIdentifier>{f1613fea-ccee-4806-811c-13ee1bf86b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="system\scene\BossStage">
+      <UniqueIdentifier>{99f56a0d-e1ab-4cf7-b991-1f887d238f6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -412,6 +430,24 @@
     <ClInclude Include="program\Scythe.h">
       <Filter>Game\GameObjects\Enemy\Boss\Sickle</Filter>
     </ClInclude>
+    <ClInclude Include="program\trailbeam.h">
+      <Filter>Game\GameObjects\Enemy\Boss\trailbeam</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Title.h">
+      <Filter>system\scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Particle .h">
+      <Filter>system\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BoxButton.h">
+      <Filter>system\button</Filter>
+    </ClInclude>
+    <ClInclude Include="program\TutorialScene.h">
+      <Filter>system\scene\tutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="program\BossScene.h">
+      <Filter>system\scene\BossStage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -495,7 +531,6 @@
     <ClCompile Include="program\PlayerRender.cpp">
       <Filter>Game\GameObjects\Player\DrawMgr</Filter>
     </ClCompile>
-    <ClCompile Include="program\Hit.cpp" />
     <ClCompile Include="program\PlayerUi.cpp" />
     <ClCompile Include="program\ui_health.cpp">
       <Filter>Game\GameObjects\Player\UI</Filter>
@@ -511,6 +546,22 @@
     </ClCompile>
     <ClCompile Include="program\BossLaser.cpp">
       <Filter>Game\GameObjects\Enemy\Boss\Laser</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Scythe.cpp">
+      <Filter>Game\GameObjects\Enemy\Boss\Sickle</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Particle .cpp">
+      <Filter>system\effect</Filter>
+    </ClCompile>
+    <ClCompile Include="program\Title.cpp">
+      <Filter>system\scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="program\TutorialScene.cpp">
+      <Filter>system\scene\tutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="program\BossScene.cpp" />
+    <ClCompile Include="program\Hit.cpp">
+      <Filter>system\Hit</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

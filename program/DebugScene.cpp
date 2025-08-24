@@ -11,7 +11,7 @@ SceneDebug::SceneDebug(){
 	player->SetComponent();
 	player_ = player;
 	GameObjMgr::Instance().AddGameObject(player);
-	MapManager::Instance().Load();
+	MapManager::Instance().Load(boss_map_data_);
 	GameObjMgr::Instance().AddGameObject(Boss::GetGameObj());
 
 }

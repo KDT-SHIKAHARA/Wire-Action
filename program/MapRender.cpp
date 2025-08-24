@@ -49,7 +49,8 @@ void MapRender::Render(const MapData& mapData) {
 			//	0番なら処理を行わない
 			//	今後の0番の実装をできるようにインスタンスは実装しておくけど
 			//	実装しないほうがいいかも
-			if (tile.id == 0) continue;
+			
+			if (!isDraw(tile.id)) continue;
 
 			//	描画座標の取得
 			//int drawX = x * map_size - (camera_pos.x + camera_size.x / 2);

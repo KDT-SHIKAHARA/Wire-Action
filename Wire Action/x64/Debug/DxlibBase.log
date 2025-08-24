@@ -1,1 +1,327 @@
-﻿  DxlibBase.vcxproj -> C:\Users\kirit\source\repos\Wire-Action\x64\Debug\Wire Action.exe
+﻿  BossScene.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+  (ソース ファイル 'program/BossScene.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\BossScene.cpp(22,97):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+  (ソース ファイル 'program/BossScene.cpp' をコンパイルしています)
+  
+  Camera.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(29,21): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(32,28): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(38,21): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(41,28): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+  (ソース ファイル 'program/Camera.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp(25,25):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+  (ソース ファイル 'program/Camera.cpp' をコンパイルしています)
+  
+  DebugScene.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+  (ソース ファイル 'program/DebugScene.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\DebugScene.cpp(21,97):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+  (ソース ファイル 'program/DebugScene.cpp' をコンパイルしています)
+  
+  GameManager.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\BoxButton.h(28,61): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  (ソース ファイル 'program/GameManager.cpp' をコンパイルしています)
+  
+  MapLoader.cpp
+  MapManager.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.h(36,53):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator *<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
+          with
+          [
+              N=double
+          ]
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(202,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\MapManager.cpp(179,38):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator /<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
+          with
+          [
+              N=double
+          ]
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(203,20): warning C4244:         ]
+  (ソース ファイル 'program/MapManager.cpp' をコンパイルしています)
+  
+  Title.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\BoxButton.h(28,61): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+  (ソース ファイル 'program/Title.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(18,17): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(19,17): warning C4244: '初期化中': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(20,20): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(30,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(30,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(81,34): warning C4244: '初期化中': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,49): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,49): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,49): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,49): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,49): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,39): warning C4244: '引数': 'const T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,39): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,39): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,39): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,39): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,32): warning C4244: '引数': 'const T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,32): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,32): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,32): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,32): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,25): warning C4244: '引数': 'const T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,25): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,25): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,25): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(82,25): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,67): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,67): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,67): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,67): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,67): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,51): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,51): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,51): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,51): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,51): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,41): warning C4244: '引数': 'const T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,41): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,41): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,41): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,41): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,28): warning C4244: '引数': 'T' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,28): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,28): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,28): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp(83,28): warning C4244:         ]
+  TutorialScene.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+  (ソース ファイル 'program/TutorialScene.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\TutorialScene.cpp(20,97):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+  (ソース ファイル 'program/TutorialScene.cpp' をコンパイルしています)
+  
+  dive wire.cpp
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.h(52,58): warning C4305: '初期化中': 'double' から 'const float' へ切り詰めます。
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\hp.h(47,21): warning C4244: 'return': 'int' から 'float' への変換です。データが失われる可能性があります。
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(144,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(144,15): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20): warning C4244:         ]
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(162,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.h(36,53):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<float> operator *<float,double>(const Vector2D<float> &,const N &)' のリファレンスを確認してください
+          with
+          [
+              N=double
+          ]
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244: '=': 'N' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:             N=double
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(163,20): warning C4244:         ]
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20): warning C4244:         ]
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+      C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(213,20):
+      テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+          C:\Users\kirit\source\repos\Wire-Action\program\dive wire.cpp(75,67):
+          コンパイル対象の関数 テンプレート インスタンス化 'Vector2D<int> operator /<float>(const Vector2D<float> &,const int &)' のリファレンスを確認してください
+  
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244: '=': 'T' から 'T' への変換です。データが失われる可能性があります。
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         with
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=float
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         and
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         [
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:             T=int
+C:\Users\kirit\source\repos\Wire-Action\program\vector2d.h(214,20): warning C4244:         ]
+  (ソース ファイル 'program/dive%20wire.cpp' をコンパイルしています)
+  
+  コードを生成中...
+  DxlibBase.vcxproj -> C:\Users\kirit\source\repos\Wire-Action\x64\Debug\Wire Action.exe

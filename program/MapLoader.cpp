@@ -28,9 +28,14 @@ std::vector<Tile> MapLoader::split(const std::string& str, char delimiter) {
 	return tmp_row;
 }
 
+/// <summary>
+/// 当たり判定をするかどうかを判定するメソッド
+/// </summary>
+/// <param name="map_num"></param>
+/// <returns></returns>
 bool MapLoader::CheckCollisionFlag(int map_num){
 	//	コンテナに当たり判定をする要素を格納
-	static const std::unordered_set<int> conllidable_nums = { 1,2 };
+	static const std::unordered_set<int> conllidable_nums = { 1,2};
 
 	//	コンテナ内にあればtrue　なければflase
 	return conllidable_nums.count(map_num) > 0;

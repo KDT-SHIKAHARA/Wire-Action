@@ -15,6 +15,8 @@ enum class TileShape {
 	Circle,
 };
 
+
+
 /// <summary>
 /// マップタイルはこのクラスを扱うマップデータクラスでしか直接中身を扱わないのでstructで
 /// カプセル化を重視するならclassでアクセサを作ります。

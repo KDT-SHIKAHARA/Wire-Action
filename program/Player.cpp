@@ -45,6 +45,7 @@ void Player::SetComponent()
 	auto ui_health = AddComponent<UiPlayerHp>();
 	ui_health->Set(health);
 	AddComponent<Sword>();
+	SetTag(Tag::GetString(TagType::Player));
 	SortLayer();	//	layer‚Ìƒ\[ƒg
 }
 

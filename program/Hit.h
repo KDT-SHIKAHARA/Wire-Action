@@ -25,4 +25,17 @@ public:
 	static bool CheckCircleRect(const Vector2D<float>& rect_pos, const Vector2D<float>& rect_size,
 		const Vector2D<float>& circle_pos, float radius);
 
+
+	// “_‚ÆŽlŠpŒ`‚Ì“–‚½‚è”»’è
+	static bool CheckPointRect(const Vector2D<float>& point,
+		const Vector2D<float>& rectPos,
+		const Vector2D<float>& rectSize)
+	{
+		return (point.x >= rectPos.x) &&
+			(point.x <= rectPos.x + rectSize.x) &&
+			(point.y >= rectPos.y) &&
+			(point.y <= rectPos.y + rectSize.y);
+	}
+
+
 };

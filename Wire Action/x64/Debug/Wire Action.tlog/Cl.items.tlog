@@ -3,6 +3,7 @@ C:\Users\kirit\source\repos\Wire-Action\program\Anim2D.cpp;C:\Users\kirit\source
 C:\Users\kirit\source\repos\Wire-Action\program\Boss.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Boss.obj
 C:\Users\kirit\source\repos\Wire-Action\program\BossLaser.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\BossLaser.obj
 C:\Users\kirit\source\repos\Wire-Action\program\BossRender.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\BossRender.obj
+C:\Users\kirit\source\repos\Wire-Action\program\BossScene.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\BossScene.obj
 C:\Users\kirit\source\repos\Wire-Action\program\BossStateController.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\BossStateController.obj
 C:\Users\kirit\source\repos\Wire-Action\program\Camera.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Camera.obj
 C:\Users\kirit\source\repos\Wire-Action\program\Color.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Color.obj
@@ -21,14 +22,18 @@ C:\Users\kirit\source\repos\Wire-Action\program\MapManager.cpp;C:\Users\kirit\so
 C:\Users\kirit\source\repos\Wire-Action\program\MapRender.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\MapRender.obj
 C:\Users\kirit\source\repos\Wire-Action\program\MapResHandle.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\MapResHandle.obj
 C:\Users\kirit\source\repos\Wire-Action\program\moveSystem.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\moveSystem.obj
+C:\Users\kirit\source\repos\Wire-Action\program\Particle .cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Particle .obj
 C:\Users\kirit\source\repos\Wire-Action\program\Player.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Player.obj
 C:\Users\kirit\source\repos\Wire-Action\program\PlayerRender.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\PlayerRender.obj
 C:\Users\kirit\source\repos\Wire-Action\program\PlayerStateController.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\PlayerStateController.obj
 C:\Users\kirit\source\repos\Wire-Action\program\PlayerUi.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\PlayerUi.obj
 C:\Users\kirit\source\repos\Wire-Action\program\RigidbodyComp.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\RigidbodyComp.obj
+C:\Users\kirit\source\repos\Wire-Action\program\Scythe.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Scythe.obj
 C:\Users\kirit\source\repos\Wire-Action\program\Sound.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Sound.obj
 C:\Users\kirit\source\repos\Wire-Action\program\SoundManager.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\SoundManager.obj
 C:\Users\kirit\source\repos\Wire-Action\program\sword.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\sword.obj
 C:\Users\kirit\source\repos\Wire-Action\program\TestPlayer.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\TestPlayer.obj
+C:\Users\kirit\source\repos\Wire-Action\program\Title.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\Title.obj
 C:\Users\kirit\source\repos\Wire-Action\program\transform.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\transform.obj
+C:\Users\kirit\source\repos\Wire-Action\program\TutorialScene.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\TutorialScene.obj
 C:\Users\kirit\source\repos\Wire-Action\program\ui_health.cpp;C:\Users\kirit\source\repos\Wire-Action\Wire Action\x64\Debug\ui_health.obj

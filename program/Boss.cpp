@@ -7,6 +7,7 @@
 #include "BossRender.h"
 #include "SystemConfig.h"
 #include "BossLaser.h"
+#include "Scythe.h"
 
 std::shared_ptr<GameObject> Boss::GetGameObj()
 {
@@ -20,6 +21,7 @@ std::shared_ptr<GameObject> Boss::GetGameObj()
 	auto Controller = tmp_GameObj->AddComponent<BossStateController>(); //	ó‘ÔŠÇ—
 	Controller->Start();
 	tmp_GameObj->AddComponent<Laser>();
+	tmp_GameObj->AddComponent<Scythe>();
 	tmp_GameObj->SortLayer();
 	return tmp_GameObj;
 }

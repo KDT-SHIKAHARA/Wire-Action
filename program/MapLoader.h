@@ -3,6 +3,7 @@
 #include<vector>
 #include"Tile.h"
 
+
 class MapLoader {
 	enum TileType{
 		None,
