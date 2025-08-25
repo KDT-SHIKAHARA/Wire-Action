@@ -168,6 +168,7 @@
     <ClInclude Include="program\dive wire.h" />
     <ClInclude Include="program\DiveWireController.h" />
     <ClInclude Include="program\DrawableComp.h" />
+    <ClInclude Include="program\Goal.h" />
     <ClInclude Include="program\health.h" />
     <ClInclude Include="program\Hit.h" />
     <ClInclude Include="program\HitBOxRenderComp.h" />
@@ -193,6 +194,7 @@
     <ClInclude Include="program\PlayerState.h" />
     <ClInclude Include="program\PlayerStateController.h" />
     <ClInclude Include="program\PlayerUi.h" />
+    <ClInclude Include="program\PointSaver.h" />
     <ClInclude Include="program\Rect.h" />
     <ClInclude Include="program\RigidbodyComp.h" />
     <ClInclude Include="program\power.h" />
@@ -258,6 +260,7 @@
     <ClCompile Include="program\PlayerRender.cpp" />
     <ClCompile Include="program\PlayerStateController.cpp" />
     <ClCompile Include="program\PlayerUi.cpp" />
+    <ClCompile Include="program\PointSaver.cpp" />
     <ClCompile Include="program\RigidbodyComp.cpp" />
     <ClCompile Include="program\Scythe.cpp" />
     <ClCompile Include="program\Sound.cpp" />

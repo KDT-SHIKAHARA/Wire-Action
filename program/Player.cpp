@@ -59,7 +59,7 @@ void Player::Update()
 
 void Player::Render()
 {
-
+#ifdef _DEBUG
 	//	ÉJÉÅÉâç¿ïW
 	Vector2D<float> camera_pos = Camera::Instance().position();
 	Vector2D<float> camera_size = Camera::Instance().area_size();
@@ -70,7 +70,9 @@ void Player::Render()
 	Vector2D<float> draw = trans - camera_pos + (camera_size / 2);
 
 	DrawBoxAA(draw.x, draw.y, draw.x + size.x, draw.y + size.y,
-		RED, TRUE);
+		RED, FALSE);
+#endif // _DEBUG
+
 	GameObject::Render();
 
 }

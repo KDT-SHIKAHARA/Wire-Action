@@ -260,3 +260,4 @@ Vector2D<T> GetPointFromAngle(const Vector2D<T>& center,float distance,float ang
 
 //	ÉGÉäÉAÉX
 using Vector2Df = Vector2D<float>;
+using Vector2Di = Vector2D<int>;

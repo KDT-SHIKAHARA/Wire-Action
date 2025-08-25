@@ -230,6 +230,12 @@
     <Filter Include="Game\GameObjects\component\BoxRender">
       <UniqueIdentifier>{ed081e9f-b27c-41f4-a942-e3f576fb6ff0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="system\PointSaver">
+      <UniqueIdentifier>{9c27ef67-cb6c-4c3d-ae68-20a81e40cbc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Goal">
+      <UniqueIdentifier>{0e4d4170-d85c-4280-bcb8-3aa24ac40a07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -466,6 +472,12 @@
     <ClInclude Include="program\HitBOxRenderComp.h">
       <Filter>Game\GameObjects\component\BoxRender</Filter>
     </ClInclude>
+    <ClInclude Include="program\PointSaver.h">
+      <Filter>system\PointSaver</Filter>
+    </ClInclude>
+    <ClInclude Include="program\Goal.h">
+      <Filter>Game\GameObjects\Goal</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -591,6 +603,9 @@
     </ClCompile>
     <ClCompile Include="program\HitBOxRenderComp.cpp">
       <Filter>Game\GameObjects\component\BoxRender</Filter>
+    </ClCompile>
+    <ClCompile Include="program\PointSaver.cpp">
+      <Filter>system\PointSaver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
