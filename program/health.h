@@ -6,7 +6,7 @@
 #include "Time.h"
 
 class Health : public Component {
-
+protected:
 	//	ãŒÀ‰ºŒÀ
 	void clamp() { current_ = std::clamp(current_, 0, max_); }
 
@@ -65,7 +65,7 @@ public:
 			alive_.Set(false);
 	}
 
-private:
+protected:
 	double invi_time_ = 0;	//	–³“GŠÔ
 	double invi_max_;		//	–³“GŠÔ‚ÌÅ‘åŠÔ
 	int current_;			//	¡‚Ì‘Ì—Í

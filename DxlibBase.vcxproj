@@ -173,6 +173,7 @@
     <ClInclude Include="program\health.h" />
     <ClInclude Include="program\Hit.h" />
     <ClInclude Include="program\HitBOxRenderComp.h" />
+    <ClInclude Include="program\NormalEnemy.h" />
     <ClInclude Include="program\Particle .h" />
     <ClInclude Include="program\PlayerRender.h" />
     <ClInclude Include="program\flag.h" />
@@ -213,6 +214,7 @@
     <ClInclude Include="program\SoundType.h" />
     <ClInclude Include="program\StandingBot.h" />
     <ClInclude Include="program\StandingBotRender.h" />
+    <ClInclude Include="program\StandingFactory.h" />
     <ClInclude Include="program\StatusAlias.h" />
     <ClInclude Include="program\sword.h" />
     <ClInclude Include="program\SwordController.h" />

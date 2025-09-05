@@ -236,6 +236,15 @@
     <Filter Include="Game\GameObjects\Goal">
       <UniqueIdentifier>{0e4d4170-d85c-4280-bcb8-3aa24ac40a07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\GameObjects\Player\Gun">
+      <UniqueIdentifier>{6ed570c8-b9ea-4b80-8c1e-e72a14c10d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\StandBot\Factory">
+      <UniqueIdentifier>{d2dfc732-eaa6-4455-bc67-af2a1a97e035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameObjects\Enemy\normal">
+      <UniqueIdentifier>{4994d43b-99f9-464e-a3c8-d21c6bd80613}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\GameManager.h">
@@ -479,7 +488,13 @@
       <Filter>Game\GameObjects\Goal</Filter>
     </ClInclude>
     <ClInclude Include="program\Gun.h">
-      <Filter>Game\GameObjects\Player</Filter>
+      <Filter>Game\GameObjects\Player\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="program\StandingFactory.h">
+      <Filter>Game\GameObjects\Enemy\StandBot\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="program\NormalEnemy.h">
+      <Filter>Game\GameObjects\Enemy\normal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -610,6 +625,8 @@
     <ClCompile Include="program\PointSaver.cpp">
       <Filter>system\PointSaver</Filter>
     </ClCompile>
-    <ClCompile Include="program\Gun.cpp" />
+    <ClCompile Include="program\Gun.cpp">
+      <Filter>Game\GameObjects\Player\Gun</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

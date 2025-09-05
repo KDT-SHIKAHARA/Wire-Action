@@ -13,6 +13,8 @@
 #include"sword.h"
 #include"ui_health.h"
 #include"health.h"
+#include"Gun.h"
+
 
 /// <summary>
 /// èâä˙âª
@@ -43,8 +45,9 @@ void Player::SetComponent()
 	anim->Initialize(state, input);
 	auto health = AddComponent<Health>(4);
 	auto ui_health = AddComponent<UiPlayerHp>();
+	AddComponent<Gun>();
 	ui_health->Set(health);
-	AddComponent<Sword>();
+	//AddComponent<Sword>();
 	SetTag(Tag::GetString(TagType::Player));
 	SortLayer();	//	layerÇÃÉ\Å[Ég
 }

@@ -51,7 +51,20 @@ public:
 	//	カメラ座標を設定する
 	void SetPosition(const Vector2D<float>& position) { position_ = position; }
 
+	Vector2Df ScreenToWorld(const Vector2Df& a_screenPos) {
+		// カメラの位置 (スクリーン中央基準)
+		Vector2Df cameraPos = position_;  // カメラの位置 (カメラ座標系)
 
+		// 画面の中心 (スクリーン中央)
+		Vector2Df screenCenter = Vector2Df(area_size_.x / 2, area_size_.y / 2);
+
+		// スクリーン座標 -> カメラ中心基準座標
+		Vector2Df localPos = a_screenPos - screenCenter;
+
+		// カメラの位置を加えてワールド座標に変換
+		return localPos + cameraPos;
+
+	};
 
 	//	画面内の判定
 private:
