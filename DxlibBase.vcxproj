@@ -169,6 +169,7 @@
     <ClInclude Include="program\DiveWireController.h" />
     <ClInclude Include="program\DrawableComp.h" />
     <ClInclude Include="program\Goal.h" />
+    <ClInclude Include="program\Gun.h" />
     <ClInclude Include="program\health.h" />
     <ClInclude Include="program\Hit.h" />
     <ClInclude Include="program\HitBOxRenderComp.h" />
@@ -244,6 +245,7 @@
     <ClCompile Include="program\DiveWireController.cpp" />
     <ClCompile Include="program\GameManager.cpp" />
     <ClCompile Include="program\GameObject.cpp" />
+    <ClCompile Include="program\Gun.cpp" />
     <ClCompile Include="program\Hit.cpp" />
     <ClCompile Include="program\HitBOxRenderComp.cpp" />
     <ClCompile Include="program\input.cpp" />

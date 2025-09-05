@@ -478,6 +478,9 @@
     <ClInclude Include="program\Goal.h">
       <Filter>Game\GameObjects\Goal</Filter>
     </ClInclude>
+    <ClInclude Include="program\Gun.h">
+      <Filter>Game\GameObjects\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="program\GameManager.cpp">
@@ -607,5 +610,6 @@
     <ClCompile Include="program\PointSaver.cpp">
       <Filter>system\PointSaver</Filter>
     </ClCompile>
+    <ClCompile Include="program\Gun.cpp" />
   </ItemGroup>
 </Project>
